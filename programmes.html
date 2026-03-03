@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programmes | SaleSycle</title>
+  <meta name="description" content="Structured sales programmes designed to align leadership, empower managers and elevate frontline sales performance.">
 
+<style>
+
+/* GLOBAL */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 140px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #07e9d6, #cb6ce6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #A1A1AA;
+  line-height: 1.6;
+}
+
+/* PROGRAMME GRID */
+
+.programme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.programme-card {
+  background: #111827;
+  padding: 50px 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(7,233,214,0.15);
+  transition: 0.3s ease;
+}
+
+.programme-card:hover {
+  border-color: #07e9d6;
+  box-shadow: 0 0 20px rgba(7,233,214,0.15);
+}
+
+.programme-card h3 {
+  color: #07e9d6;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.programme-card p {
+  color: #A1A1AA;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* DIAGNOSTIC SECTION */
+
+.diagnostic {
+  background: #111827;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.diagnostic h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.diagnostic p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #A1A1AA;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+
+.primary-btn {
+  display: inline-block;
+  background: #07e9d6;
+  color: #0f172a;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  box-shadow: 0 0 20px rgba(7,233,214,0.4);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .programme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container">
+    <h1>Structured Programmes. Tailored Execution.</h1>
+    <p>
+      Every organisation is different. The principles of predictable performance are not.
+      Our programmes provide structured transformation frameworks, delivered in a way that fits your culture, your leadership and your sales environment.
+    </p>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+
+<section>
+  <div class="container">
+
+    <div class="programme-grid">
+
+      <div class="programme-card">
+        <h3>Leadership Alignment</h3>
+        <p>
+          We work with senior leaders to create clarity of commercial direction, behavioural standards and performance expectations. 
+          Sustainable revenue growth begins at the top, with aligned thinking and consistent messaging.
+        </p>
+      </div>
+
+      <div class="programme-card">
+        <h3>Sales Management Acceleration</h3>
+        <p>
+          Managers shape daily performance. We equip them with structured coaching rhythms, pipeline discipline and accountability frameworks 
+          that translate strategy into frontline execution.
+        </p>
+      </div>
+
+      <div class="programme-card">
+        <h3>Frontline Sales Performance</h3>
+        <p>
+          Revenue is won or lost at the frontline. Through mentoring, practical selling frameworks and real time coaching, 
+          we elevate confidence, consistency and measurable output across the sales team.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- DIAGNOSTIC ENTRY -->
+
+<section class="diagnostic">
+  <div class="container">
+    <h2>Not Sure Where To Start?</h2>
+    <p>
+      Most organisations do not need more motivation. They need clarity. Our structured sales diagnostic identifies the gaps in leadership alignment, management discipline and frontline execution, providing a clear roadmap for improvement.
+    </p>
+    <a href="contact.html" class="primary-btn">Request A Diagnostic</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <img src="logo.png" alt="SaleSycle Logo" style="height:40px; margin-bottom:20px;">
+      <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#">How We Work</a><br>
+      <a href="#">Programmes</a><br>
+      <a href="#">Case Studies</a><br>
+      <a href="#">Insights</a><br>
+      <a href="#">Contact</a>
+    </div>
+
+    <div>
+      <h4>Ready To Transform?</h4>
+      <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
+      <a href="mailto:enquiries@salesycle.com" style="color:#07e9d6; font-weight:bold;">Get In Touch →</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 SaleSycle. All rights reserved.
+  </div>
+</div>
+
+</body>
+</html>
