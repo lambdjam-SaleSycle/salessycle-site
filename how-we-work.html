@@ -124,22 +124,27 @@ p {
 .aide-row {
   display: grid;
   grid-template-columns: 120px 100px 1px 1fr;
-  align-items: start;
+  align-items: center; /* changed from start */
   gap: 30px;
-  padding: 70px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 90px 0;
+  border-bottom: 1px solid rgba(7,233,214,0.15);
+  max-width: 900px;      /* new */
+  margin: 0 auto;        /* new */
 }
 
 .aide-letter {
-  font-size: 100px;
+  font-size: 110px;
   font-weight: bold;
-  color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.10);
   text-align: center;
+  line-height: 1;
 }
 
-.aide-icon {
-  display: flex;
-  justify-content: center;
+.aide-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: #cb6ce6;
+  stroke-width: 2.5;
 }
 
 .aide-divider-vertical {
@@ -178,6 +183,28 @@ p {
   .aide-content {
     text-align: center;
   }
+/* CLOSING CTA */
+
+.closing-cta {
+  background: #111827; /* slightly lighter than main background */
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.closing-cta h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #07e9d6, #cb6ce6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.closing-cta p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  color: #A1A1AA;
+  font-size: 18px;
+  line-height: 1.6;
 }
 </style>
 </head>
@@ -296,6 +323,20 @@ p {
         <p>Revenue becomes predictable, momentum builds and the cycle sustains itself.</p>
       </div>
     </div>
+
+  </div>
+</section>
+  <!-- FINAL CTA SECTION -->
+<section class="closing-cta">
+  <div class="container">
+
+    <h2>Ready To Build Predictable Performance?</h2>
+
+    <p>
+      If you are serious about aligning leadership, empowering managers and elevating your sales team, the conversation starts here. Sustainable revenue growth is not accidental, it is designed.
+    </p>
+
+    <a href="contact.html" class="primary-btn">Start The Conversation</a>
 
   </div>
 </section>
