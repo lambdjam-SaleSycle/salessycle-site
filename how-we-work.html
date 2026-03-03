@@ -121,7 +121,64 @@ p {
 .btn-primary:hover {
   box-shadow: 0 0 18px rgba(7,233,214,0.5);
 }
+.aide-row {
+  display: grid;
+  grid-template-columns: 120px 100px 1px 1fr;
+  align-items: start;
+  gap: 30px;
+  padding: 70px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
+.aide-letter {
+  font-size: 100px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.aide-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.aide-divider-vertical {
+  background: rgba(7,233,214,0.45);
+  width: 1px;
+  height: 100%;
+}
+
+.aide-content {
+  text-align: left;
+}
+
+.aide-content h3 {
+  color: #07e9d6;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.aide-content p {
+  font-size: 16px;
+  color: #A1A1AA;
+  margin-bottom: 16px;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+  .aide-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .aide-divider-vertical {
+    display: none;
+  }
+
+  .aide-content {
+    text-align: center;
+  }
+}
 </style>
 </head>
 
