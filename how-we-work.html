@@ -22,28 +22,22 @@ body {
 
 section {
   padding: 120px 0;
-  position: relative;
 }
 
 h1 {
   font-size: 56px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   background: linear-gradient(90deg, #07e9d6, #cb6ce6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-h2 {
-  font-size: 36px;
-  margin-bottom: 24px;
-}
-
 p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #A1A1AA;
-  max-width: 760px;
-  margin: 0 auto 20px auto;
+  max-width: 820px;
+  margin: 0 auto 24px auto;
 }
 
 .header {
@@ -68,53 +62,43 @@ p {
   color: #07e9d6;
 }
 
-.hero-sub {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.aide-background {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 220px;
-  font-weight: bold;
-  color: rgba(255,255,255,0.03);
-  letter-spacing: 40px;
-  z-index: 0;
-  pointer-events: none;
+.section-dark {
+  background-color: #111118;
 }
 
 .pillars {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
-  position: relative;
-  z-index: 1;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
 }
 
 .pillar {
-  padding: 30px;
-  border-top: 2px solid #07e9d6;
-  border-bottom: 1px solid #1A1A22;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(7,233,214,0.25);
+}
+
+.pillar-letter {
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.06);
+  margin-bottom: 10px;
+}
+
+.pillar-icon {
+  margin: 10px 0 20px 0;
 }
 
 .pillar h3 {
   font-size: 24px;
-  color: #cb6ce6;
-  margin-bottom: 16px;
+  color: #07e9d6;
+  margin-bottom: 18px;
 }
 
 .pillar p {
   font-size: 16px;
   color: #A1A1AA;
   margin-bottom: 16px;
-}
-
-.section-dark {
-  background-color: #111118;
 }
 
 .btn-primary {
@@ -124,7 +108,7 @@ p {
   border-radius: 8px;
   font-weight: bold;
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 70px;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -190,28 +174,35 @@ p {
 <section>
   <div class="container">
     <h1>The AIDE Performance Framework</h1>
-    <div class="hero-sub">
-      <p>
-        Predictable revenue is not created through training events.
-      </p>
-      <p>
-        It is built through aligned leadership, empowered managers and accountable sales teams operating within a clear, structured system.
-      </p>
-      <p>
-        AIDE is our four pillar methodology designed to align the top, equip the middle and elevate the front line where revenue is won or lost.
-      </p>
-    </div>
+
+    <p>
+      Predictable revenue is not created through isolated training days or short term motivational initiatives.
+    </p>
+
+    <p>
+      It is built through aligned leadership, empowered sales managers and accountable sales teams operating within a clear, structured performance system.
+    </p>
+
+    <p>
+      AIDE is our four pillar methodology designed to align the top, equip the middle and elevate the front line where revenue is ultimately won, strengthened and sustained.
+    </p>
   </div>
 </section>
 
 <section class="section-dark">
-  <div class="aide-background">AIDE</div>
-
   <div class="container">
 
     <div class="pillars">
 
+      <!-- ASSESS -->
       <div class="pillar">
+        <div class="pillar-letter">A</div>
+        <div class="pillar-icon">
+          <svg width="48" height="48" fill="none" stroke="#cb6ce6" stroke-width="2">
+            <circle cx="24" cy="24" r="18"/>
+            <polygon points="24,10 30,30 24,26 18,30"/>
+          </svg>
+        </div>
         <h3>Assess</h3>
         <p>
           We immerse ourselves in your commercial reality, analysing pipeline strength, process clarity and behavioural patterns across leadership and sales teams.
@@ -221,33 +212,56 @@ p {
         </p>
       </div>
 
+      <!-- INTEGRATE -->
       <div class="pillar">
+        <div class="pillar-letter">I</div>
+        <div class="pillar-icon">
+          <svg width="48" height="48" fill="none" stroke="#cb6ce6" stroke-width="2">
+            <path d="M12 36 L24 12 L36 36 Z"/>
+            <line x1="24" y1="12" x2="24" y2="4"/>
+          </svg>
+        </div>
         <h3>Integrate</h3>
         <p>
-          Leaders and managers align first, establishing expectations and standards.
+          Leaders and managers align first, establishing expectations and performance standards across the organisation.
         </p>
         <p>
-          We then cascade into the sales team with mentorship and structured support to ensure alignment is lived, not declared.
+          We then cascade into the sales team with mentorship and structured support so alignment becomes action, not theory.
         </p>
       </div>
 
+      <!-- DEVELOP -->
       <div class="pillar">
+        <div class="pillar-letter">D</div>
+        <div class="pillar-icon">
+          <svg width="48" height="48" fill="none" stroke="#cb6ce6" stroke-width="2">
+            <polyline points="6,30 16,20 26,24 38,10"/>
+            <line x1="38" y1="10" x2="38" y2="20"/>
+          </svg>
+        </div>
         <h3>Develop</h3>
         <p>
-          Sales teams practise in real environments. Managers coach consistently.
+          Sales teams practise in real selling environments while managers coach with consistency and intent.
         </p>
         <p>
-          Behaviour shifts from activity tracking to performance ownership. Better habits begin to drive stronger numbers.
+          Behaviour shifts from activity tracking to genuine performance ownership, driving measurable improvement.
         </p>
       </div>
 
+      <!-- ELEVATE -->
       <div class="pillar">
+        <div class="pillar-letter">E</div>
+        <div class="pillar-icon">
+          <svg width="48" height="48" fill="none" stroke="#cb6ce6" stroke-width="2">
+            <polygon points="24,6 28,18 40,18 30,26 34,38 24,30 14,38 18,26 8,18 20,18"/>
+          </svg>
+        </div>
         <h3>Elevate</h3>
         <p>
-          With behaviours stabilised, performance compounds.
+          With behaviours stabilised and confidence growing across the sales team, performance begins to compound.
         </p>
         <p>
-          Revenue becomes predictable. Confidence grows across the sales team. The cycle sustains itself.
+          Revenue becomes predictable, momentum builds and the cycle sustains itself.
         </p>
       </div>
 
