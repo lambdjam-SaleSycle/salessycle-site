@@ -21,12 +21,44 @@ body {
   padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   margin: 0;
 }
 
 section {
   padding: 100px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  color: #A1A1AA;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #07e9d6;
 }
 
 /* HERO */
@@ -115,7 +147,6 @@ section {
   color: #0f172a;
   padding: 14px 30px;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
   transition: 0.3s ease;
 }
@@ -124,10 +155,47 @@ section {
   box-shadow: 0 0 20px rgba(7,233,214,0.4);
 }
 
+/* FOOTER */
+
+.footer {
+  background: #0b1220;
+  padding: 80px 0 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer p, .footer a {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: #07e9d6;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 13px;
+  color: #6B7280;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
   .programme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -139,6 +207,24 @@ section {
 </style>
 </head>
 <body>
+
+<!-- HEADER -->
+
+<div class="header">
+  <div class="container nav">
+    <div>
+      <img src="logo.png" alt="SaleSycle Logo" style="height:40px;">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="how-we-work.html">How We Work</a>
+      <a href="programmes.html" style="color:#07e9d6;">Programmes</a>
+      <a href="#">Case Studies</a>
+      <a href="#">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
 
 <!-- HERO -->
 
@@ -188,7 +274,7 @@ section {
   </div>
 </section>
 
-<!-- DIAGNOSTIC ENTRY -->
+<!-- DIAGNOSTIC -->
 
 <section class="diagnostic">
   <div class="container">
