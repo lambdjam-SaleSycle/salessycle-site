@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SalesSycle | Sales Transformation Consultancy</title>
+<title>SalesSycle | Transformational Sales Consultancy</title>
 <meta name="description" content="SalesSycle partners with senior leaders to rebuild sales performance through behavioural alignment, commercial discipline and structured transformation.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,20 +15,21 @@ body {
   color: #EAEAF0;
 }
 
-section {
-  padding: 120px 20px;
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+section {
+  padding: 120px 0;
 }
 
 h1 {
   font-size: 58px;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(90deg, #7C3AED, #EC4899);
+  background: linear-gradient(90deg, #00E5FF, #FF2DA6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -42,7 +43,46 @@ p {
   font-size: 18px;
   line-height: 1.6;
   color: #A1A1AA;
-  max-width: 700px;
+  max-width: 720px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #FF2DA6;
+  color: #0B0B0F;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.btn-secondary {
+  border: 1px solid #00E5FF;
+  color: #00E5FF;
+  padding: 14px 28px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid #1A1A22;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  margin-left: 28px;
+  color: #EAEAF0;
+  font-size: 16px;
 }
 
 .hero {
@@ -54,11 +94,11 @@ p {
   content: "";
   position: absolute;
   top: -200px;
-  left: -200px;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle at center, rgba(124,58,237,0.15), transparent 70%);
-  filter: blur(100px);
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle at center, rgba(0,229,255,0.15), transparent 70%);
+  filter: blur(120px);
   z-index: 0;
 }
 
@@ -67,36 +107,13 @@ p {
   z-index: 1;
 }
 
-.buttons {
-  margin-top: 40px;
-}
-
-.btn-primary {
-  background-color: #7C3AED;
-  color: white;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 8px;
-  margin-right: 16px;
-  display: inline-block;
-}
-
-.btn-secondary {
-  border: 1px solid #EC4899;
-  color: #EC4899;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-}
-
 .section-dark {
   background-color: #111118;
 }
 
 .framework-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
   margin-top: 60px;
 }
@@ -104,17 +121,37 @@ p {
 .framework-item h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: #EC4899;
+  color: #FF2DA6;
 }
 
 .footer {
   background-color: #0A0A0D;
-  padding: 80px 20px;
-  text-align: center;
+  padding: 80px 0 40px 0;
+  border-top: 1px solid #1A1A22;
 }
 
-.footer p {
-  margin: 8px 0;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer h4 {
+  color: #EAEAF0;
+  margin-bottom: 16px;
+}
+
+.footer a {
+  display: block;
+  color: #A1A1AA;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1A1A22;
+  padding-top: 20px;
+  text-align: center;
   color: #A1A1AA;
 }
 
@@ -122,6 +159,22 @@ p {
 </head>
 
 <body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="container header-inner">
+    <div>
+      <img src="logo.png" alt="SaleSycle Logo" style="height:40px;">
+    </div>
+    <div class="nav">
+      <a href="#">How We Work</a>
+      <a href="#">Programmes</a>
+      <a href="#">Case Studies</a>
+      <a href="#">Insights</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -131,8 +184,8 @@ p {
       SalesSycle partners with senior leaders to reset culture, embed commercial discipline and rebuild performance systems that drive sustained revenue growth.
     </p>
 
-    <div class="buttons">
-      <a href="#" class="btn-primary">Start The Transformation</a>
+    <div style="margin-top:40px;">
+      <a href="mailto:enquiries@salesycle.com" class="btn-primary">Start The Transformation</a>
       <a href="#" class="btn-secondary">See How It Works</a>
     </div>
   </div>
@@ -177,37 +230,49 @@ p {
   </div>
 </section>
 
-<!-- PROOF -->
+<!-- FINAL CTA -->
 <section class="section-dark">
   <div class="container">
-    <h2>Transformation That Delivers Measurable Impact</h2>
-    <p>
-      From commercial realignment to behavioural reset, SalesSycle engagements focus on sustainable uplift — not short term motivation.
-    </p>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section>
-  <div class="container">
-    <h2>Ready To Rebuild Performance?</h2>
+    <h2>Ready To Transform Your Sales Environment?</h2>
     <p>
       Engage with SalesSycle to design a structured, measurable and accountable path to commercial growth.
     </p>
 
-    <div class="buttons">
-      <a href="mailto:enquiries@salesycle.com" class="btn-primary">Contact SalesSycle</a>
+    <div style="margin-top:40px;">
+      <a href="mailto:enquiries@salesycle.com" class="btn-primary">Get In Touch</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <div class="footer">
-  <p><strong>SalesSycle</strong></p>
-  <p>Transformational Sales Consultancy</p>
-  <p>Southwest England</p>
-  <p>enquiries@salesycle.com</p>
-  <p>© 2026 SalesSycle. All rights reserved.</p>
+  <div class="container footer-grid">
+
+    <div>
+      <img src="logo.png" alt="SaleSycle Logo" style="height:40px; margin-bottom:20px;">
+      <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#">How We Work</a>
+      <a href="#">Programmes</a>
+      <a href="#">Case Studies</a>
+      <a href="#">Insights</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div>
+      <h4>Ready To Transform?</h4>
+      <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
+      <a href="mailto:enquiries@salesycle.com" style="color:#00E5FF; font-weight:bold;">Get In Touch →</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 SalesSycle. All rights reserved.
+  </div>
 </div>
 
 </body>
