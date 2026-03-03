@@ -13,6 +13,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #0B0B0F;
   color: #EAEAF0;
+  text-align: center;
 }
 
 .container {
@@ -29,7 +30,7 @@ h1 {
   font-size: 58px;
   line-height: 1.1;
   margin-bottom: 24px;
-  background: linear-gradient(90deg, #00E5FF, #FF2DA6);
+  background: linear-gradient(90deg, #07e9d6, #cb6ce6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -44,6 +45,7 @@ p {
   line-height: 1.6;
   color: #A1A1AA;
   max-width: 720px;
+  margin: 0 auto;
 }
 
 a {
@@ -51,25 +53,35 @@ a {
 }
 
 .btn-primary {
-  background: #FF2DA6;
+  background: #07e9d6;
   color: #0B0B0F;
   padding: 14px 28px;
   border-radius: 8px;
   font-weight: bold;
   display: inline-block;
   margin-right: 16px;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 18px rgba(7,233,214,0.5);
 }
 
 .btn-secondary {
-  border: 1px solid #00E5FF;
-  color: #00E5FF;
+  border: 2px solid #cb6ce6;
+  color: #cb6ce6;
   padding: 14px 28px;
   border-radius: 8px;
   display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0 18px rgba(203,108,230,0.5);
 }
 
 .header {
-  padding: 24px 0;
+  padding: 30px 0;
   border-bottom: 1px solid #1A1A22;
 }
 
@@ -97,7 +109,7 @@ a {
   right: -200px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle at center, rgba(0,229,255,0.15), transparent 70%);
+  background: radial-gradient(circle at center, rgba(7,233,214,0.12), transparent 70%);
   filter: blur(120px);
   z-index: 0;
 }
@@ -116,18 +128,20 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
   margin-top: 60px;
+  text-align: center;
 }
 
 .framework-item h3 {
   font-size: 22px;
   margin-bottom: 12px;
-  color: #FF2DA6;
+  color: #cb6ce6;
 }
 
 .footer {
   background-color: #0A0A0D;
   padding: 80px 0 40px 0;
   border-top: 1px solid #1A1A22;
+  text-align: left;
 }
 
 .footer-grid {
@@ -146,6 +160,10 @@ a {
   display: block;
   color: #A1A1AA;
   margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: #07e9d6;
 }
 
 .footer-bottom {
