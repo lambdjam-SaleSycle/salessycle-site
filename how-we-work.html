@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>How We Work | SaleSycle</title>
-  <meta name="description" content="Discover the SaleSycle A.I.D.E Framework. A structured sales transformation methodology built to deliver sustainable revenue growth and predictable performance.">
+  <meta name="description" content="The SaleSycle AIDE Framework. A structured sales performance methodology aligning leadership, empowering managers and elevating sales team accountability.">
 
 <style>
 
@@ -22,6 +22,7 @@ body {
 
 section {
   padding: 120px 0;
+  position: relative;
 }
 
 h1 {
@@ -41,7 +42,7 @@ p {
   font-size: 18px;
   line-height: 1.6;
   color: #A1A1AA;
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto 20px auto;
 }
 
@@ -67,17 +68,48 @@ p {
   color: #07e9d6;
 }
 
-.framework-section {
-  margin-top: 80px;
+.hero-sub {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.framework-block {
-  margin-bottom: 80px;
+.aide-background {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 220px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.03);
+  letter-spacing: 40px;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.framework-block h3 {
-  font-size: 28px;
+.pillars {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.pillar {
+  padding: 30px;
+  border-top: 2px solid #07e9d6;
+  border-bottom: 1px solid #1A1A22;
+}
+
+.pillar h3 {
+  font-size: 24px;
   color: #cb6ce6;
+  margin-bottom: 16px;
+}
+
+.pillar p {
+  font-size: 16px;
+  color: #A1A1AA;
   margin-bottom: 16px;
 }
 
@@ -92,7 +124,7 @@ p {
   border-radius: 8px;
   font-weight: bold;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 60px;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -157,58 +189,68 @@ p {
 
 <section>
   <div class="container">
-    <h1>The SaleSycle A.I.D.E Framework</h1>
-    <p>
-      Sustainable sales transformation does not happen through isolated training days.
-      It requires structured alignment, behavioural change and leadership accountability.
-    </p>
-    <p>
-      A.I.D.E is our four phase methodology for building predictable performance from the inside out.
-    </p>
+    <h1>The AIDE Performance Framework</h1>
+    <div class="hero-sub">
+      <p>
+        Predictable revenue is not created through training events.
+      </p>
+      <p>
+        It is built through aligned leadership, empowered managers and accountable sales teams operating within a clear, structured system.
+      </p>
+      <p>
+        AIDE is our four pillar methodology designed to align the top, equip the middle and elevate the front line where revenue is won or lost.
+      </p>
+    </div>
   </div>
 </section>
 
 <section class="section-dark">
-  <div class="container framework-section">
+  <div class="aide-background">AIDE</div>
 
-    <div class="framework-block">
-      <h3>A — Assess</h3>
-      <p>
-        We immerse ourselves in your business. We analyse pipeline health, sales process maturity, leadership alignment and behavioural patterns across the team.
-      </p>
-      <p>
-        This is not a surface level audit. It is a structured discovery phase designed to uncover friction, gaps and untapped opportunity.
-      </p>
-    </div>
+  <div class="container">
 
-    <div class="framework-block">
-      <h3>I — Integrate</h3>
-      <p>
-        We align senior leaders and sales managers first. Without leadership buy in, behavioural change will not sustain.
-      </p>
-      <p>
-        We introduce mindset shifts, practical techniques and performance clarity that empower managers to lead from the front.
-      </p>
-    </div>
+    <div class="pillars">
 
-    <div class="framework-block">
-      <h3>D — Develop</h3>
-      <p>
-        Practice. Coaching. Accountability.
-      </p>
-      <p>
-        We work alongside leadership and managers to embed new behaviours in real selling environments. Change is observed, coached and refined in real time.
-      </p>
-    </div>
+      <div class="pillar">
+        <h3>Assess</h3>
+        <p>
+          We immerse ourselves in your commercial reality, analysing pipeline strength, process clarity and behavioural patterns across leadership and sales teams.
+        </p>
+        <p>
+          Clarity replaces assumption. Opportunity becomes visible.
+        </p>
+      </div>
 
-    <div class="framework-block">
-      <h3>E — Elevate</h3>
-      <p>
-        Once behaviours stabilise and performance begins to rise, we focus on optimisation.
-      </p>
-      <p>
-        Revenue becomes predictable. Confidence becomes visible. The cycle becomes self sustaining.
-      </p>
+      <div class="pillar">
+        <h3>Integrate</h3>
+        <p>
+          Leaders and managers align first, establishing expectations and standards.
+        </p>
+        <p>
+          We then cascade into the sales team with mentorship and structured support to ensure alignment is lived, not declared.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Develop</h3>
+        <p>
+          Sales teams practise in real environments. Managers coach consistently.
+        </p>
+        <p>
+          Behaviour shifts from activity tracking to performance ownership. Better habits begin to drive stronger numbers.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <h3>Elevate</h3>
+        <p>
+          With behaviours stabilised, performance compounds.
+        </p>
+        <p>
+          Revenue becomes predictable. Confidence grows across the sales team. The cycle sustains itself.
+        </p>
+      </div>
+
     </div>
 
     <a href="mailto:enquiries@salesycle.com" class="btn-primary">Start The Conversation</a>
