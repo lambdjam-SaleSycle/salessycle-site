@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insight, Systems drive results | SaleSycle</title>
+  <meta name="description" content="SaleSycle insight article, why systems and behaviours create predictable performance." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <style>
+    :root{ --bg:#0f172a; --frame:#0b1220; --panel:#111827; --text:#e5e7eb; --muted:#a1a1aa; --line:rgba(255,255,255,0.06); --cyan:#07e9d6; --magenta:#cb6ce6; }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Arial,sans-serif; background:var(--bg); color:var(--text); }
+    .container{ max-width:900px; margin:0 auto; padding:0 20px; }
+    a{ text-decoration:none; }
+
+    .header{ background:var(--frame); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1000; }
+    .nav{ display:flex; justify-content:space-between; align-items:center; padding:16px 0; gap:16px; }
+    .nav-links{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:18px; }
+    .nav-links a{ color:var(--muted); font-size:15px; transition:0.25s ease; }
+    .nav-links a:hover{ color:var(--cyan); }
+
+    section{ padding:56px 0; }
+    h1{
+      margin:0 0 12px;
+      font-size:34px;
+      background:linear-gradient(90deg, var(--cyan), var(--magenta));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    p{ margin:0 0 14px; color:var(--muted); line-height:1.7; }
+
+    .panel{ background:var(--panel); border:1px solid rgba(7,233,214,0.14); border-radius:16px; padding:22px; }
+    .panel h2{ margin:18px 0 10px; font-size:18px; color:var(--cyan); }
+
+    .btnrow{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{ background:var(--cyan); color:var(--frame); padding:10px 14px; border-radius:10px; font-weight:bold; display:inline-block; }
+    .btn2{ border:2px solid var(--magenta); color:var(--magenta); padding:8px 12px; border-radius:10px; font-weight:bold; display:inline-block; }
+
+    .footer{ background:var(--frame); padding:48px 0 26px; border-top:1px solid var(--line); margin-top:24px; }
+    .footer-grid{ display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:28px; }
+    .footer h4{ margin:0 0 12px; }
+    .footer p, .footer a{ color:var(--muted); font-size:14px; line-height:1.6; }
+    .footer a:hover{ color:var(--cyan); }
+    .footer-bottom{ text-align:center; margin-top:30px; font-size:13px; color:#6b7280; border-top:1px solid var(--line); padding-top:18px; }
+
+    @media (max-width: 980px){
+      .footer-grid{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container nav">
+      <img src="logo.png" alt="SaleSycle Logo" style="height:120px;" />
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="insights.html" style="color:var(--cyan);">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="panel">
+        <h1>Why sales teams do not fail, systems do</h1>
+
+        <p>Sales underperformance is often blamed on individuals. More often, the environment is the issue.</p>
+        <p>If standards are unclear, coaching is inconsistent, and qualification discipline is optional, performance becomes volatile.</p>
+
+        <h2>What leaders control</h2>
+        <p>Leaders control clarity. What good looks like, what is measured, and what is reinforced.</p>
+
+        <h2>What managers control</h2>
+        <p>Managers control cadence. Weekly coaching rhythm, pipeline reviews, and behaviour reinforcement.</p>
+
+        <h2>What the sales team needs</h2>
+        <p>Sales teams need practical frameworks, fast feedback, and accountability that improves performance, not just reporting.</p>
+
+        <h2>How AIDE supports this</h2>
+        <p>Assess reality, integrate standards across leaders and managers, develop behaviours through live coaching, elevate through consistent review until results become predictable.</p>
+
+        <div class="btnrow">
+          <a class="btn" href="insights.html">Back to insights</a>
+          <a class="btn2" href="contact.html">Start a conversation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="logo.png" alt="SaleSycle Logo" style="height:120px; margin-bottom:14px;" />
+        <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="how-we-work.html">How We Work</a><br />
+        <a href="programmes.html">Programmes</a><br />
+        <a href="case-studies.html">Case Studies</a><br />
+        <a href="insights.html">Insights</a><br />
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Ready to transform</h4>
+        <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
+        <a href="mailto:enquiries@salesycle.com" style="color:var(--cyan); font-weight:bold;">Get in touch →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2026 SaleSycle. All rights reserved.</div>
+  </div>
+
+</body>
+</html>
