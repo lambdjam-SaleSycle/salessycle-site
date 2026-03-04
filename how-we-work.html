@@ -1,375 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>How We Work | SaleSycle</title>
-  <meta name="description" content="The SaleSycle AIDE Framework. A structured sales performance methodology aligning leadership, empowering managers and elevating sales team accountability.">
+  <meta name="description" content="The SaleSycle AIDE framework. A structured approach to align leadership, strengthen management discipline, and elevate sales team accountability." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --frame:#0b1220;
+      --panel:#111827;
+      --text:#e5e7eb;
+      --muted:#a1a1aa;
+      --line:rgba(255,255,255,0.06);
+      --cyan:#07e9d6;
+      --magenta:#cb6ce6;
+    }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Arial,sans-serif; background:var(--bg); color:var(--text); }
+    .container{ max-width:1000px; margin:0 auto; padding:0 20px; }
+    a{ text-decoration:none; }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0B0B0F;
-  color: #EAEAF0;
-  text-align: center;
-}
+    .header{ background:var(--frame); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1000; }
+    .nav{ display:flex; justify-content:space-between; align-items:center; padding:16px 0; gap:16px; }
+    .nav-links{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:18px; }
+    .nav-links a{ color:var(--muted); font-size:15px; transition:0.25s ease; }
+    .nav-links a:hover{ color:var(--cyan); }
 
-.container {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    section{ padding:56px 0; }
+    .hero{ padding:72px 0 38px; text-align:center; }
+    .hero h1{
+      margin:0 0 14px;
+      font-size:40px;
+      background:linear-gradient(90deg, var(--cyan), var(--magenta));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .hero p{ margin:0 auto; max-width:780px; color:var(--muted); line-height:1.6; font-size:17px; }
 
-section {
-  padding: 120px 0;
-}
+    .frame{
+      background:var(--panel);
+      border:1px solid rgba(7,233,214,0.14);
+      border-radius:16px;
+      padding:22px;
+      margin-top:20px;
+    }
+    .frame h2{ margin:0 0 10px; font-size:22px; }
+    .frame p{ margin:0; color:var(--muted); line-height:1.65; }
 
-h1 {
-  font-size: 56px;
-  margin-bottom: 30px;
-  background: linear-gradient(90deg, #07e9d6, #cb6ce6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+    }
 
-p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #A1A1AA;
-  max-width: 820px;
-  margin: 0 auto 24px auto;
-}
+    .pill{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:14px;
+      padding:18px;
+    }
 
-.header {
-  padding: 30px 0;
-  border-bottom: 1px solid #1A1A22;
-}
+    .pill-top{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .letter{
+      width:44px; height:44px;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:12px;
+      background:rgba(7,233,214,0.10);
+      border:1px solid rgba(7,233,214,0.18);
+      color:var(--cyan);
+      font-weight:bold;
+      font-size:18px;
+    }
 
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .icon svg{ width:34px; height:34px; stroke:var(--magenta); stroke-width:2.6; fill:none; }
 
-.nav a {
-  margin-left: 28px;
-  color: #EAEAF0;
-  font-size: 16px;
-  text-decoration: none;
-}
+    .pill h3{ margin:0; font-size:18px; color:var(--cyan); }
+    .pill p{ margin:10px 0 0; color:var(--muted); line-height:1.6; font-size:14.5px; }
 
-.nav a:hover {
-  color: #07e9d6;
-}
+    .cta{
+      margin-top:18px;
+      display:flex;
+      justify-content:center;
+    }
+    .btn{
+      background:var(--cyan);
+      color:var(--frame);
+      padding:12px 22px;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.25s ease;
+      display:inline-block;
+    }
+    .btn:hover{ box-shadow:0 0 18px rgba(7,233,214,0.35); transform:translateY(-1px); }
 
-.section-dark {
-  background-color: #111118;
-}
+    .footer{
+      background:var(--frame);
+      padding:48px 0 26px;
+      border-top:1px solid var(--line);
+      margin-top:24px;
+    }
+    .footer-grid{ display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:28px; }
+    .footer h4{ margin:0 0 12px; }
+    .footer p, .footer a{ color:var(--muted); font-size:14px; line-height:1.6; }
+    .footer a:hover{ color:var(--cyan); }
+    .footer-bottom{
+      text-align:center;
+      margin-top:30px;
+      font-size:13px;
+      color:#6b7280;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+    }
 
-.pillars {
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 60px;
-}
-
-.pillar {
-  padding: 40px 20px;
-}
-
-.pillar-letter {
-  font-size: 110px;
-  font-weight: bold;
-  color: rgba(255,255,255,0.08);
-  margin-bottom: 10px;
-}
-
-.pillar-icon {
-  margin-bottom: 20px;
-}
-
-.pillar-divider {
-  border-top: 1.5px solid rgba(7,233,214,0.45);
-  width: 60%;
-  margin: 25px auto;
-}
-
-.pillar h3 {
-  font-size: 24px;
-  color: #07e9d6;
-  margin-bottom: 18px;
-}
-
-.pillar p {
-  font-size: 16px;
-  color: #A1A1AA;
-  margin-bottom: 16px;
-}
-
-.btn-primary {
-  background: #07e9d6;
-  color: #0B0B0F;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 70px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn-primary:hover {
-  box-shadow: 0 0 18px rgba(7,233,214,0.5);
-}
-.aide-row {
-  display: grid;
-  grid-template-columns: 120px 100px 1px 1fr;
-  align-items: center; /* changed from start */
-  gap: 30px;
-  padding: 90px 0;
-  border-bottom: 1px solid rgba(7,233,214,0.15);
-  max-width: 900px;      /* new */
-  margin: 0 auto;        /* new */
-}
-
-.aide-letter {
-  font-size: 110px;
-  font-weight: bold;
-  color: rgba(255,255,255,0.10);
-  text-align: center;
-  line-height: 1;
-}
-
-.aide-icon svg {
-  width: 48px;
-  height: 48px;
-  stroke: #cb6ce6;
-  stroke-width: 2.5;
-}
-
-.aide-divider-vertical {
-  background: rgba(7,233,214,0.45);
-  width: 1px;
-  height: 100%;
-}
-
-.aide-content {
-  text-align: left;
-}
-
-.aide-content h3 {
-  color: #07e9d6;
-  font-size: 26px;
-  margin-bottom: 18px;
-}
-
-.aide-content p {
-  font-size: 16px;
-  color: #A1A1AA;
-  margin-bottom: 16px;
-}
-
-/* Mobile stacking */
-@media (max-width: 900px) {
-  .aide-row {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .aide-divider-vertical {
-    display: none;
-  }
-
-  .aide-content {
-    text-align: center;
-  }
-/* CLOSING CTA */
-
-.closing-cta {
-  background: #111827; /* slightly lighter than main background */
-  padding: 120px 20px;
-  text-align: center;
-}
-
-.closing-cta h2 {
-  font-size: 36px;
-  margin-bottom: 25px;
-  background: linear-gradient(90deg, #07e9d6, #cb6ce6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.closing-cta p {
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  color: #A1A1AA;
-  font-size: 18px;
-  line-height: 1.6;
-}
-</style>
+    @media (max-width: 980px){
+      .grid{ grid-template-columns:1fr; }
+      .footer-grid{ grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="header">
-  <div class="container header-inner">
-    <img src="logo.png" alt="SaleSycle Logo" height="120">
-    <div class="nav">
-      <a href="index.html">Home</a>
-      <a href="how-we-work.html">How We Work</a>
-      <a href="#">Programmes</a>
-      <a href="#">Insights</a>
-      <a href="mailto:enquiries@salesycle.com">Contact</a>
+  <div class="header">
+    <div class="container nav">
+      <img src="logo.png" alt="SaleSycle Logo" style="height:120px;" />
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how-we-work.html" style="color:var(--cyan);">How We Work</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </div>
-</div>
 
-<section>
-  <div class="container">
-    <h1>The AIDE Performance Framework</h1>
+  <section class="hero">
+    <div class="container">
+      <h1>The AIDE Performance Framework</h1>
+      <p>
+        Predictable revenue is built through aligned leadership, consistent management discipline,
+        and accountable sales teams operating within a clear performance system.
+      </p>
 
-    <p>
-      Predictable revenue is not created through isolated training days or short term motivational initiatives.
-    </p>
+      <div class="frame">
+        <h2>Four pillars, one deployment rhythm</h2>
+        <p>
+          We assess reality, integrate standards across leaders and managers, develop sales team behaviours through live coaching,
+          and elevate performance until it becomes sustainable.
+        </p>
 
-    <p>
-      It is built through aligned leadership, empowered sales managers and accountable sales teams operating within a clear, structured performance system.
-    </p>
+        <div class="grid">
 
-    <p>
-      AIDE is our four pillar methodology designed to align the top, equip the middle and elevate the front line where revenue is ultimately won, strengthened and sustained.
-    </p>
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">A</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <circle cx="12" cy="12" r="1.6"></circle>
+                  <path d="M12 3.2v8.8"></path>
+                  <path d="M12 3.2l2.2 4.2h-4.4z"></path>
+                </svg>
+              </div>
+              <h3>Assess</h3>
+            </div>
+            <p>We map performance truth, pipeline health, process clarity, coaching rhythm, and sales behaviours.</p>
+          </div>
+
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">I</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.5c4 4.6 5.8 8.1 0 19c-5.8-10.9-4-14.4 0-19z"></path>
+                  <circle cx="12" cy="11.8" r="2.2"></circle>
+                  <path d="M9.4 19.2l-1.7 2.3"></path>
+                  <path d="M14.6 19.2l1.7 2.3"></path>
+                </svg>
+              </div>
+              <h3>Integrate</h3>
+            </div>
+            <p>We align leaders and managers, then cascade standards and support into the sales team.</p>
+          </div>
+
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">D</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <path d="M7 16l4-4 3 3 5-6"></path>
+                </svg>
+              </div>
+              <h3>Develop</h3>
+            </div>
+            <p>Live practice, coaching, and accountability, delivered with managers, embedded into real selling.</p>
+          </div>
+
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">E</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.4l2.7 6h6.5l-5.2 3.8 2 6.4-6-4-6 4 2-6.4-5.2-3.8h6.5z"></path>
+                </svg>
+              </div>
+              <h3>Elevate</h3>
+            </div>
+            <p>Performance compounds, confidence rises, forecasting tightens, and results become predictable.</p>
+          </div>
+
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="contact.html">Start the conversation</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="logo.png" alt="SaleSycle Logo" style="height:120px; margin-bottom:14px;" />
+        <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="how-we-work.html">How We Work</a><br />
+        <a href="programmes.html">Programmes</a><br />
+        <a href="case-studies.html">Case Studies</a><br />
+        <a href="insights.html">Insights</a><br />
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Ready to transform</h4>
+        <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
+        <a href="mailto:enquiries@salesycle.com" style="color:var(--cyan); font-weight:bold;">Get in touch →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2026 SaleSycle. All rights reserved.</div>
   </div>
-</section>
-
-<section class="section-dark">
-  <div class="container">
-
-    <div class="aide-row">
-      <div class="aide-letter">A</div>
-
-      <div class="aide-icon">
-        <svg width="56" height="56" fill="none" stroke="#cb6ce6" stroke-width="3">
-          <circle cx="28" cy="28" r="22"/>
-          <circle cx="28" cy="28" r="4"/>
-          <line x1="28" y1="10" x2="28" y2="28"/>
-          <polygon points="28,10 33,20 23,20"/>
-        </svg>
-      </div>
-
-      <div class="aide-divider-vertical"></div>
-
-      <div class="aide-content">
-        <h3>Assess</h3>
-        <p>We immerse ourselves in your commercial reality, analysing pipeline strength, process clarity and behavioural patterns across leadership and sales teams.</p>
-        <p>Clarity replaces assumption. Opportunity becomes visible.</p>
-      </div>
-    </div>
-
-    <div class="aide-row">
-      <div class="aide-letter">I</div>
-
-      <div class="aide-icon">
-        <svg width="56" height="56" fill="none" stroke="#cb6ce6" stroke-width="3">
-          <path d="M28 6 C38 18 42 28 28 50 C14 28 18 18 28 6 Z"/>
-          <circle cx="28" cy="26" r="5"/>
-          <line x1="22" y1="46" x2="18" y2="54"/>
-          <line x1="34" y1="46" x2="38" y2="54"/>
-        </svg>
-      </div>
-
-      <div class="aide-divider-vertical"></div>
-
-      <div class="aide-content">
-        <h3>Integrate</h3>
-        <p>Leaders and managers align first, establishing expectations and performance standards across the organisation.</p>
-        <p>We then cascade into the sales team with mentorship and structured support so alignment becomes action, not theory.</p>
-      </div>
-    </div>
-
-    <div class="aide-row">
-      <div class="aide-letter">D</div>
-
-      <div class="aide-icon">
-        <svg width="56" height="56" fill="none" stroke="#cb6ce6" stroke-width="3">
-          <rect x="10" y="10" width="36" height="36"/>
-          <polyline points="16,36 24,26 30,30 40,18"/>
-        </svg>
-      </div>
-
-      <div class="aide-divider-vertical"></div>
-
-      <div class="aide-content">
-        <h3>Develop</h3>
-        <p>Sales teams practise in real selling environments while managers coach with consistency and intent.</p>
-        <p>Behaviour shifts from activity tracking to genuine performance ownership, driving measurable improvement.</p>
-      </div>
-    </div>
-
-    <div class="aide-row">
-      <div class="aide-letter">E</div>
-
-      <div class="aide-icon">
-        <svg width="56" height="56" fill="none" stroke="#cb6ce6" stroke-width="3">
-          <polygon points="28,6 33,20 48,20 36,30 40,46 28,36 16,46 20,30 8,20 23,20"/>
-        </svg>
-      </div>
-
-      <div class="aide-divider-vertical"></div>
-
-      <div class="aide-content">
-        <h3>Elevate</h3>
-        <p>With behaviours stabilised and confidence growing across the sales team, performance begins to compound.</p>
-        <p>Revenue becomes predictable, momentum builds and the cycle sustains itself.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-  <!-- FINAL CTA SECTION -->
-<section class="closing-cta">
-  <div class="container">
-
-    <h2>Ready To Build Predictable Performance?</h2>
-
-    <p>
-      If you are serious about aligning leadership, empowering managers and elevating your sales team, the conversation starts here. Sustainable revenue growth is not accidental, it is designed.
-    </p>
-
-    <a href="contact.html" class="primary-btn">Start The Conversation</a>
-
-  </div>
-</section>
-<!-- FOOTER -->
-<div class="footer">
-  <div class="container footer-grid">
-
-    <div>
-      <img src="logo.png" alt="SaleSycle Logo" style="height:120px; margin-bottom:20px;">
-      <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
-    </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <a href="#">How We Work</a>
-      <a href="#">Programmes</a>
-      <a href="#">Case Studies</a>
-      <a href="#">Insights</a>
-      <a href="#">Contact</a>
-    </div>
-
-    <div>
-      <h4>Ready To Transform?</h4>
-      <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
-      <a href="mailto:enquiries@salesycle.com" style="color:#00E5FF; font-weight:bold;">Get In Touch →</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 SalesSycle. All rights reserved.
-  </div>
-</div>
 
 </body>
 </html>
