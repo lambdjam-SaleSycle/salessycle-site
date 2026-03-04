@@ -1,338 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Case Studies | SaleSycle</title>
-  <meta name="description" content="Real commercial transformation delivered through structured leadership alignment, sales management acceleration and frontline performance improvement.">
+  <meta name="description" content="Anonymous, realistic case studies showing measurable commercial improvement through the SaleSycle AIDE framework." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --frame:#0b1220;
+      --panel:#111827;
+      --text:#e5e7eb;
+      --muted:#a1a1aa;
+      --line:rgba(255,255,255,0.06);
+      --cyan:#07e9d6;
+      --magenta:#cb6ce6;
+    }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Arial,sans-serif; background:var(--bg); color:var(--text); }
+    .container{ max-width:1000px; margin:0 auto; padding:0 20px; }
+    a{ text-decoration:none; }
 
-/* GLOBAL */
+    .header{ background:var(--frame); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1000; }
+    .nav{ display:flex; justify-content:space-between; align-items:center; padding:16px 0; gap:16px; }
+    .nav-links{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:18px; }
+    .nav-links a{ color:var(--muted); font-size:15px; transition:0.25s ease; }
+    .nav-links a:hover{ color:var(--cyan); }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-}
+    section{ padding:56px 0; }
+    .hero{ padding:72px 0 38px; text-align:center; }
+    .hero h1{
+      margin:0 0 14px;
+      font-size:40px;
+      background:linear-gradient(90deg, var(--cyan), var(--magenta));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .hero p{ margin:0 auto; max-width:780px; color:var(--muted); line-height:1.6; font-size:17px; }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
 
-section {
-  padding: 70px 0; /* tighter spacing */
-}
+    .case{
+      background:var(--panel);
+      border:1px solid rgba(7,233,214,0.14);
+      border-radius:16px;
+      padding:20px;
+      transition:0.25s ease;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .case:hover{
+      border-color:rgba(7,233,214,0.32);
+      box-shadow:0 0 18px rgba(7,233,214,0.18);
+      transform:translateY(-1px);
+    }
+    .case h3{ margin:0; font-size:18px; color:var(--cyan); }
+    .case p{ margin:0; color:var(--muted); line-height:1.6; font-size:14.5px; }
 
-h1, h2, h3, h4 {
-  margin: 0;
-}
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:2px;
+    }
+    .tag{
+      font-size:12px;
+      color:var(--text);
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:4px 8px;
+      border-radius:999px;
+    }
 
-a {
-  text-decoration: none;
-}
+    .row-actions{
+      margin-top:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+    }
+    .btn{
+      display:inline-block;
+      background:var(--cyan);
+      color:var(--frame);
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.25s ease;
+      font-size:14px;
+    }
+    .btn:hover{ box-shadow:0 0 18px rgba(7,233,214,0.35); }
 
-/* HEADER */
+    .btn-ghost{
+      display:inline-block;
+      border:2px solid var(--magenta);
+      color:var(--magenta);
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.25s ease;
+      font-size:14px;
+    }
+    .btn-ghost:hover{ box-shadow:0 0 18px rgba(203,108,230,0.22); }
 
-.header {
-  background: #0f172a;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    .footer{
+      background:var(--frame);
+      padding:48px 0 26px;
+      border-top:1px solid var(--line);
+      margin-top:24px;
+    }
+    .footer-grid{ display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:28px; }
+    .footer h4{ margin:0 0 12px; }
+    .footer p, .footer a{ color:var(--muted); font-size:14px; line-height:1.6; }
+    .footer a:hover{ color:var(--cyan); }
+    .footer-bottom{
+      text-align:center;
+      margin-top:30px;
+      font-size:13px;
+      color:#6b7280;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+    }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.nav-links a {
-  margin-left: 30px;
-  color: #A1A1AA;
-  font-size: 15px;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #07e9d6;
-}
-
-/* HERO */
-
-.hero {
-  text-align: center;
-  padding: 100px 20px 60px;
-}
-
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #07e9d6, #cb6ce6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  max-width: 720px;
-  margin: 0 auto;
-  font-size: 18px;
-  color: #A1A1AA;
-  line-height: 1.6;
-}
-
-/* FEATURED CASE */
-
-.featured-case {
-  background: #111827;
-  padding: 50px;
-  border-radius: 16px;
-  border: 1px solid rgba(7,233,214,0.2);
-}
-
-.featured-case h2 {
-  color: #07e9d6;
-  margin-bottom: 20px;
-  font-size: 26px;
-}
-
-.featured-case p {
-  color: #A1A1AA;
-  line-height: 1.6;
-  margin-bottom: 18px;
-  font-size: 16px;
-}
-
-.metrics {
-  margin-top: 25px;
-  font-weight: bold;
-  color: white;
-}
-
-/* CASE GRID */
-
-.case-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.case-card {
-  background: #111827;
-  padding: 35px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.case-card h3 {
-  color: #07e9d6;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.case-card p {
-  color: #A1A1AA;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* CTA */
-
-.closing-cta {
-  background: #111827;
-  text-align: center;
-  padding: 80px 20px;
-  margin-top: 60px;
-  border-top: 1px solid rgba(7,233,214,0.15);
-}
-
-.closing-cta h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.closing-cta p {
-  max-width: 650px;
-  margin: 0 auto 30px;
-  color: #A1A1AA;
-  font-size: 17px;
-}
-
-.primary-btn {
-  display: inline-block;
-  background: #07e9d6;
-  color: #0f172a;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.primary-btn:hover {
-  box-shadow: 0 0 20px rgba(7,233,214,0.4);
-}
-
-/* FOOTER */
-
-.footer {
-  background: #0b1220;
-  padding: 60px 0 30px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.footer p, .footer a {
-  color: #A1A1AA;
-  font-size: 14px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 13px;
-  color: #6B7280;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .case-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-</style>
+    @media (max-width: 980px){
+      .grid{ grid-template-columns:1fr; }
+      .footer-grid{ grid-template-columns:1fr; }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-
-<div class="header">
-  <div class="container nav">
-    <div>
-      <img src="logo.png" alt="SaleSycle Logo" style="height:120px;">
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="how-we-work.html">How We Work</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="case-studies.html" style="color:#07e9d6;">Case Studies</a>
-      <a href="#">Insights</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-  <div class="container">
-    <h1>Measured Commercial Impact</h1>
-    <p>
-      Real organisations. Structured intervention. Clear commercial outcomes.
-      Each engagement followed the AIDE methodology and delivered sustainable performance improvement.
-    </p>
-  </div>
-</section>
-
-<!-- FEATURED CASE -->
-
-<section>
-  <div class="container">
-    <div class="featured-case">
-      <h2>Mid Market B2B Services Organisation</h2>
-      <p>
-        Following rapid growth, leadership recognised inconsistency across regional sales teams. Pipeline accuracy was unreliable, coaching was irregular and performance varied significantly between managers.
-      </p>
-      <p>
-        Through the AIDE framework we aligned commercial expectations at board level, implemented structured management coaching rhythms and introduced frontline accountability systems.
-      </p>
-      <p class="metrics">
-        Results within 9 months:  
-        +18% revenue growth  
-        +22% pipeline accuracy improvement  
-        15% reduction in voluntary sales attrition
-      </p>
-    </div>
-
-    <div class="case-grid">
-
-      <div class="case-card">
-        <h3>National Field Sales Team</h3>
-        <p>
-          A dispersed team operating with strong individual effort but limited collective discipline. After leadership calibration and structured manager enablement, frontline behaviours became consistent and measurable.
-        </p>
-        <p><strong>Outcome:</strong> 14% uplift in average deal value and improved forecast reliability within two quarters.</p>
+  <div class="header">
+    <div class="container nav">
+      <img src="logo.png" alt="SaleSycle Logo" style="height:120px;" />
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="case-studies.html" style="color:var(--cyan);">Case Studies</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
       </div>
+    </div>
+  </div>
 
-      <div class="case-card">
-        <h3>Scaling Technology Business</h3>
-        <p>
-          Rapid hiring had created capability gaps between experienced and new hires. We introduced mentoring frameworks and embedded real time coaching into weekly sales rhythms.
-        </p>
-        <p><strong>Outcome:</strong> 20% improvement in new hire ramp time and increased quarterly revenue consistency.</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Measured commercial impact</h1>
+      <p>
+        Anonymous, realistic examples showing structured intervention, measurable behaviour change,
+        improved performance, and sustainable revenue growth.
+      </p>
+
+      <div class="grid">
+
+        <a class="case" href="case-study-01.html">
+          <h3>Mid market B2B services</h3>
+          <p>Leadership alignment, management cadence, and sales team accountability brought consistency to pipeline and delivery.</p>
+          <div class="meta">
+            <span class="tag">AIDE applied</span>
+            <span class="tag">Forecasting discipline</span>
+            <span class="tag">Retention uplift</span>
+          </div>
+          <div class="row-actions">
+            <span class="btn">Read more</span>
+            <span class="btn-ghost">View outcomes</span>
+          </div>
+        </a>
+
+        <a class="case" href="case-study-02.html">
+          <h3>National field sales team</h3>
+          <p>Consistent coaching and qualification standards reduced variance and improved conversion confidence.</p>
+          <div class="meta">
+            <span class="tag">Manager coaching</span>
+            <span class="tag">Sales behaviours</span>
+            <span class="tag">Deal quality</span>
+          </div>
+          <div class="row-actions">
+            <span class="btn">Read more</span>
+            <span class="btn-ghost">View outcomes</span>
+          </div>
+        </a>
+
+        <a class="case" href="case-study-03.html">
+          <h3>Scaling technology business</h3>
+          <p>Mentorship and live support improved ramp time, lifted pipeline quality, and reduced early drop off.</p>
+          <div class="meta">
+            <span class="tag">Onboarding</span>
+            <span class="tag">Mentorship</span>
+            <span class="tag">Pipeline quality</span>
+          </div>
+          <div class="row-actions">
+            <span class="btn">Read more</span>
+            <span class="btn-ghost">View outcomes</span>
+          </div>
+        </a>
+
+        <a class="case" href="contact.html">
+          <h3>Your next case study</h3>
+          <p>If you want clarity, structure, and a measurable change in behaviours, start the conversation.</p>
+          <div class="meta">
+            <span class="tag">Diagnostic</span>
+            <span class="tag">Roadmap</span>
+            <span class="tag">Execution</span>
+          </div>
+          <div class="row-actions">
+            <span class="btn">Start here</span>
+            <span class="btn-ghost">Get in touch</span>
+          </div>
+        </a>
+
       </div>
+    </div>
+  </section>
 
+  <div class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="logo.png" alt="SaleSycle Logo" style="height:120px; margin-bottom:14px;" />
+        <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="how-we-work.html">How We Work</a><br />
+        <a href="programmes.html">Programmes</a><br />
+        <a href="case-studies.html">Case Studies</a><br />
+        <a href="insights.html">Insights</a><br />
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Ready to transform</h4>
+        <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
+        <a href="mailto:enquiries@salesycle.com" style="color:var(--cyan); font-weight:bold;">Get in touch →</a>
+      </div>
     </div>
 
+    <div class="footer-bottom">© 2026 SaleSycle. All rights reserved.</div>
   </div>
-</section>
-
-<!-- CTA -->
-
-<section class="closing-cta">
-  <div class="container">
-    <h2>Ready To Create Your Own Case Study?</h2>
-    <p>
-      Sustainable performance improvement is not theoretical. It is structured, measured and delivered through disciplined execution.
-    </p>
-    <a href="contact.html" class="primary-btn">Start The Conversation</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-
-<div class="footer">
-  <div class="container footer-grid">
-
-    <div>
-      <img src="logo.png" alt="SaleSycle Logo" style="height:120px; margin-bottom:20px;">
-      <p>Predictable performance, built sustainably. We transform sales teams from the inside out.</p>
-    </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <a href="how-we-work.html">How We Work</a><br>
-      <a href="programmes.html">Programmes</a><br>
-      <a href="case-studies.html">Case Studies</a><br>
-      <a href="#">Insights</a><br>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div>
-      <h4>Ready To Transform?</h4>
-      <p>Let’s discuss how we can help your sales team achieve sustainable, predictable growth.</p>
-      <a href="mailto:enquiries@salesycle.com" style="color:#07e9d6; font-weight:bold;">Get In Touch →</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 SaleSycle. All rights reserved.
-  </div>
-</div>
 
 </body>
 </html>
