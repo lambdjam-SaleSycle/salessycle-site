@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SaleSycle, Predictable Performance, Built Sustainably</title>
-  <meta name="description" content="SaleSycle partners with senior leaders to align leadership, strengthen management discipline, and elevate sales team accountability for predictable, sustainable revenue growth." />
+  <title>How We Work | SaleSycle</title>
+  <meta name="description" content="The SaleSycle AIDE framework. Align leadership, strengthen management discipline, and elevate sales team accountability." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -14,52 +14,25 @@
       --text:#e5e7eb;
       --muted:#a1a1aa;
       --line:rgba(255,255,255,0.05);
-      --soft:rgba(255,255,255,0.03);
       --cyan:#07e9d6;
       --magenta:#cb6ce6;
       --shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
-
     *{ box-sizing:border-box; }
-    body{ margin:0; font-family: Arial, sans-serif; background:var(--bg); color:var(--text); }
+    body{ margin:0; font-family:Arial,sans-serif; background:var(--bg); color:var(--text); }
     a{ text-decoration:none; color:inherit; }
-
     .container{ max-width:1040px; margin:0 auto; padding:0 22px; }
 
-    /* Header, locked look but with a little more breathing room */
-    .header{
-      background:var(--frame);
-      border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 0;
-      gap:18px;
-    }
-    .nav-links{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      gap:18px;
-    }
-    .nav-links a{
-      color:var(--muted);
-      font-size:15px;
-      transition:0.25s ease;
-      padding:6px 2px;
-    }
+    .header{ background:var(--frame); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1000; }
+    .nav{ display:flex; justify-content:space-between; align-items:center; padding:18px 0; gap:18px; }
+    .nav-links{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:18px; }
+    .nav-links a{ color:var(--muted); font-size:15px; transition:0.25s ease; padding:6px 2px; }
     .nav-links a:hover{ color:var(--cyan); }
 
-    /* Sections, decompressed */
     section{ padding:72px 0; }
 
     .hero{
-      padding:92px 0 64px;
+      padding:92px 0 54px;
       text-align:center;
       position:relative;
       overflow:hidden;
@@ -67,152 +40,108 @@
     .hero::before{
       content:"";
       position:absolute;
-      inset:-120px -120px auto -120px;
+      inset:-140px -140px auto -140px;
       height:420px;
       background:
-        radial-gradient(closest-side, rgba(7,233,214,0.18), rgba(7,233,214,0) 70%),
-        radial-gradient(closest-side, rgba(203,108,230,0.16), rgba(203,108,230,0) 70%);
-      filter: blur(2px);
+        radial-gradient(closest-side, rgba(7,233,214,0.16), rgba(7,233,214,0) 70%),
+        radial-gradient(closest-side, rgba(203,108,230,0.14), rgba(203,108,230,0) 70%);
       pointer-events:none;
     }
     .hero > .container{ position:relative; z-index:1; }
 
     .hero h1{
-      margin:0 0 16px;
-      font-size:46px;
-      line-height:1.12;
+      margin:0 0 14px;
+      font-size:42px;
       background:linear-gradient(90deg, var(--cyan), var(--magenta));
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
     .hero p{
       margin:0 auto;
-      max-width:820px;
-      font-size:18px;
-      line-height:1.7;
+      max-width:860px;
       color:var(--muted);
+      line-height:1.75;
+      font-size:17.5px;
     }
 
-    .cta-row{
-      margin-top:26px;
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      flex-wrap:wrap;
+    .frame{
+      margin:34px auto 0;
+      max-width:980px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:28px;
     }
-    .btn-primary{
+    .frame h2{ margin:0 0 10px; font-size:22px; }
+    .frame p{ margin:0; color:var(--muted); line-height:1.75; }
+
+    .grid{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:18px;
+    }
+    .pill{
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:16px;
+      padding:22px;
+      transition:0.25s ease;
+    }
+    .pill:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow);
+      border-color:rgba(7,233,214,0.16);
+    }
+
+    .pill-top{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .letter{
+      width:46px; height:46px;
+      display:flex; align-items:center; justify-content:center;
+      border-radius:14px;
+      background:rgba(7,233,214,0.10);
+      border:1px solid rgba(7,233,214,0.18);
+      color:var(--cyan);
+      font-weight:bold;
+      font-size:18px;
+      flex:0 0 auto;
+    }
+    .icon svg{ width:34px; height:34px; stroke:var(--magenta); stroke-width:2.6; fill:none; flex:0 0 auto; }
+    .pill h3{ margin:0; font-size:18px; color:var(--cyan); }
+    .pill p{ margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:14.8px; }
+
+    .cta{
+      margin-top:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .btn{
       background:var(--cyan);
       color:var(--frame);
       padding:12px 24px;
       border-radius:12px;
       font-weight:bold;
+      transition:0.25s ease;
       display:inline-block;
-      transition:0.25s ease;
     }
-    .btn-primary:hover{
-      box-shadow:0 0 18px rgba(7,233,214,0.35);
-      transform:translateY(-1px);
-    }
-    .btn-secondary{
-      border:2px solid var(--magenta);
-      color:var(--magenta);
-      padding:10px 22px;
-      border-radius:12px;
-      font-weight:bold;
-      display:inline-block;
-      transition:0.25s ease;
-      background:transparent;
-    }
-    .btn-secondary:hover{
-      box-shadow:0 0 18px rgba(203,108,230,0.22);
-      transform:translateY(-1px);
-    }
+    .btn:hover{ box-shadow:0 0 18px rgba(7,233,214,0.35); transform:translateY(-1px); }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-      margin-top:34px;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:16px;
-      padding:24px;
-      transition:0.25s ease;
-    }
-    .card:hover{
-      transform:translateY(-2px);
-      box-shadow:var(--shadow);
-      border-color:rgba(7,233,214,0.16);
-    }
-    .card h3{
-      margin:0 0 10px;
-      font-size:18px;
-      color:var(--cyan);
-    }
-    .card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:14.8px;
-    }
-
-    .band{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-top:1px solid rgba(255,255,255,0.05);
-      border-bottom:1px solid rgba(255,255,255,0.05);
-      padding:64px 0;
-    }
-    .band .split{
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap:22px;
-      align-items:start;
-    }
-    .band h2{
-      margin:0 0 12px;
-      font-size:26px;
-      color:var(--text);
-    }
-    .band p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
-    }
-
-    /* Footer, locked */
-    .footer{
-      background:var(--frame);
-      padding:56px 0 28px;
-      border-top:1px solid var(--line);
-    }
-    .footer-grid{
-      display:grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap:34px;
-    }
+    .footer{ background:var(--frame); padding:56px 0 28px; border-top:1px solid var(--line); margin-top:24px; }
+    .footer-grid{ display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:34px; }
     .footer h4{ margin:0 0 12px; }
-    .footer p, .footer a{
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.7;
-    }
+    .footer p, .footer a{ color:var(--muted); font-size:14px; line-height:1.7; }
     .footer a:hover{ color:var(--cyan); }
-    .footer-bottom{
-      text-align:center;
-      margin-top:34px;
-      font-size:13px;
-      color:#6b7280;
-      border-top:1px solid var(--line);
-      padding-top:18px;
-    }
+    .footer-bottom{ text-align:center; margin-top:34px; font-size:13px; color:#6b7280; border-top:1px solid var(--line); padding-top:18px; }
 
     @media (max-width: 980px){
       .grid{ grid-template-columns:1fr; }
-      .band .split{ grid-template-columns:1fr; }
       .footer-grid{ grid-template-columns:1fr; }
-      .hero h1{ font-size:38px; }
+      .hero h1{ font-size:36px; }
     }
   </style>
 </head>
@@ -223,8 +152,8 @@
     <div class="container nav">
       <img src="logo.png" alt="SaleSycle Logo" style="height:120px;" />
       <div class="nav-links">
-        <a href="index.html" style="color:var(--cyan);">Home</a>
-        <a href="how-we-work.html">How We Work</a>
+        <a href="index.html">Home</a>
+        <a href="how-we-work.html" style="color:var(--cyan);">How We Work</a>
         <a href="programmes.html">Programmes</a>
         <a href="case-studies.html">Case Studies</a>
         <a href="insights.html">Insights</a>
@@ -235,50 +164,84 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Predictable Performance, Built Sustainably</h1>
+      <h1>The AIDE Performance Framework</h1>
       <p>
-        SaleSycle is a transformational partner for SME and mid size teams.
-        We align leadership, strengthen sales management discipline, and elevate sales team accountability to unlock sustainable revenue growth.
+        Predictable revenue is built through aligned leadership, consistent management discipline,
+        and accountable sales teams operating within a clear performance system.
       </p>
 
-      <div class="cta-row">
-        <a class="btn-primary" href="contact.html">Start the conversation</a>
-        <a class="btn-secondary" href="how-we-work.html">See the AIDE framework</a>
-      </div>
+      <div class="frame">
+        <h2>Four pillars, one deployment rhythm</h2>
+        <p>
+          We assess reality, integrate standards across leaders and managers, develop sales team behaviours through live coaching,
+          and elevate performance until it becomes sustainable.
+        </p>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Not training days</h3>
-          <p>Embedded change delivered inside your business, with cadence, follow through, and practical ownership.</p>
-        </div>
-        <div class="card">
-          <h3>Systems plus behaviours</h3>
-          <p>Process clarity, pipeline discipline, coaching rhythm, and standards that teams adopt and use.</p>
-        </div>
-        <div class="card">
-          <h3>Sales team accountability</h3>
-          <p>Clear expectations, practical support, and performance ownership where revenue is won or lost.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="grid">
 
-  <section class="band">
-    <div class="container">
-      <div class="split">
-        <div>
-          <h2>Why most sales improvements stall</h2>
-          <p>
-            Leadership messaging drifts, managers coach inconsistently, and sales teams fall back into old habits.
-            SaleSycle rebuilds performance by aligning the top, equipping the middle, and elevating the front line with measurable standards.
-          </p>
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">A</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <circle cx="12" cy="12" r="1.6"></circle>
+                  <path d="M12 3.2v8.8"></path>
+                  <path d="M12 3.2l2.2 4.2h-4.4z"></path>
+                </svg>
+              </div>
+              <h3>Assess</h3>
+            </div>
+            <p>We map performance truth, pipeline health, process clarity, coaching rhythm, and sales behaviours.</p>
+          </div>
+
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">I</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.5c4 4.6 5.8 8.1 0 19c-5.8-10.9-4-14.4 0-19z"></path>
+                  <circle cx="12" cy="11.8" r="2.2"></circle>
+                  <path d="M9.4 19.2l-1.7 2.3"></path>
+                  <path d="M14.6 19.2l1.7 2.3"></path>
+                </svg>
+              </div>
+              <h3>Integrate</h3>
+            </div>
+            <p>We align leaders and managers, then cascade standards and support into the sales team.</p>
+          </div>
+
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">D</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <path d="M7 16l4-4 3 3 5-6"></path>
+                </svg>
+              </div>
+              <h3>Develop</h3>
+            </div>
+            <p>Live practice, coaching, and accountability, delivered with managers, embedded into real selling.</p>
+          </div>
+
+          <div class="pill">
+            <div class="pill-top">
+              <div class="letter">E</div>
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2.4l2.7 6h6.5l-5.2 3.8 2 6.4-6-4-6 4 2-6.4-5.2-3.8h6.5z"></path>
+                </svg>
+              </div>
+              <h3>Elevate</h3>
+            </div>
+            <p>Performance compounds, confidence rises, forecasting tightens, and results become predictable.</p>
+          </div>
+
         </div>
-        <div class="card">
-          <h3 style="color:var(--magenta);">What you get</h3>
-          <p>
-            A clear path, a consistent cadence, better forecasting discipline, improved conversion behaviours,
-            and a stronger culture that supports retention.
-          </p>
+
+        <div class="cta">
+          <a class="btn" href="contact.html">Start the conversation</a>
         </div>
       </div>
     </div>
