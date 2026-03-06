@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sales Engine Diagnostic | SaleSycle</title>
-  <meta name="description" content="Assess the strength of your sales engine across sales process, sales team behaviour, sales management rhythm, and leadership visibility." />
+  <meta name="description" content="Assess the strength of your sales engine across process, behaviour, management rhythm, and leadership visibility." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -17,6 +17,8 @@
       --cyan:#07E9D6;
       --magenta:#CB6CE6;
       --shadow:0 14px 36px rgba(0,0,0,0.28);
+      --success:#22c55e;
+      --error:#ef4444;
     }
 
     *{box-sizing:border-box;}
@@ -233,8 +235,28 @@
       box-shadow:0 0 14px rgba(7,233,214,0.12);
     }
 
+    .capture-box{
+      margin-top:26px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:24px;
+    }
+
+    .capture-box h3{
+      margin:0 0 10px;
+      font-size:24px;
+      color:var(--text);
+    }
+
+    .capture-box p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:15px;
+    }
+
     .contact-capture{
-      margin-top:24px;
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -264,6 +286,13 @@
 
     .full-width{
       grid-column:1 / -1;
+    }
+
+    .consent{
+      margin-top:14px;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.6;
     }
 
     .button-row{
@@ -307,6 +336,17 @@
       transform:translateY(-1px);
       box-shadow:0 0 18px rgba(203,108,230,0.22);
     }
+
+    .status-message{
+      margin-top:14px;
+      font-size:14px;
+      line-height:1.6;
+      display:none;
+    }
+
+    .status-message.show{display:block;}
+    .status-success{color:var(--success);}
+    .status-error{color:var(--error);}
 
     .results{
       margin-top:28px;
@@ -436,15 +476,15 @@
       <span class="eyebrow">Interactive lead diagnostic</span>
       <h1>Sales Engine Diagnostic</h1>
       <p>
-        Most sales teams are working hard, but not all are operating within a structured system that allows them to consistently perform. This short diagnostic helps you assess the strength of your current sales engine across sales process, sales team behaviour, sales management rhythm, and leadership visibility.
+        Most sales teams are working hard, but not all are operating within a structured system that allows them to consistently perform. This short diagnostic helps you assess the strength of your sales engine across sales process, sales team behaviour, sales management rhythm, and leadership visibility.
       </p>
-      <div class="hero-meta">Takes around 2 minutes to complete</div>
+      <div class="hero-meta">Complete the diagnostic and enter your details to unlock your Sales Engine Score</div>
 
       <div class="intro-grid">
         <div class="panel" style="text-align:left;">
-          <h2>What this diagnostic helps reveal</h2>
+          <h2>What this helps reveal</h2>
           <p>
-            Inconsistent revenue performance is usually not caused by a lack of effort. More often it comes from unclear process, weak management rhythm, uneven accountability, and limited visibility of what good performance should look like.
+            Inconsistent revenue performance is rarely caused by a lack of effort. More often it comes from weak process, uneven management rhythm, inconsistent sales behaviour, and limited leadership visibility.
           </p>
         </div>
 
@@ -452,9 +492,9 @@
           <h2>What happens next</h2>
           <div class="mini-points">
             <div>You complete the 12 questions</div>
-            <div>You receive your Sales Engine score</div>
-            <div>You see which areas are strongest and weakest</div>
-            <div>You can choose to discuss the result with SaleSycle</div>
+            <div>You enter your details</div>
+            <div>Your result is saved as a lead enquiry</div>
+            <div>You unlock your score and summary instantly</div>
           </div>
         </div>
       </div>
@@ -617,31 +657,38 @@
           </div>
         </div>
 
-        <div class="section-block">
-          <h3>Receive your result</h3>
-          <p>Add your details if you would like to create an email with your score and open a conversation with SaleSycle.</p>
+        <div class="capture-box">
+          <h3>Unlock your result</h3>
+          <p>
+            Enter your details to view your Sales Engine Score, see which areas are strongest, and understand where performance may be leaking.
+          </p>
 
           <div class="contact-capture">
             <div class="field">
               <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
+              <input id="name" type="text" placeholder="Your name" required />
             </div>
 
             <div class="field">
               <label for="company">Company</label>
-              <input id="company" type="text" placeholder="Company name" />
+              <input id="company" type="text" placeholder="Company name" required />
             </div>
 
             <div class="field full-width">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="Your email address" />
+              <input id="email" type="email" placeholder="Your email address" required />
             </div>
           </div>
 
-          <div class="button-row">
-            <button type="button" class="btn-primary" onclick="calculateScore()">Show my result</button>
-            <button type="button" class="btn-secondary" onclick="sendResults()">Email my result to SaleSycle</button>
+          <div class="consent">
+            We’ll only use your details to save or discuss your diagnostic result.
           </div>
+
+          <div class="button-row">
+            <button type="button" class="btn-primary" onclick="submitDiagnostic()">Unlock my result</button>
+          </div>
+
+          <div id="statusMessage" class="status-message"></div>
         </div>
 
         <div id="resultsBox" class="results">
@@ -669,7 +716,8 @@
           </div>
 
           <div class="button-row">
-            <a href="contact.html" class="btn-primary">Discuss this result</a>
+            <a href="contact.html" class="btn-primary">Discuss my result</a>
+            <button type="button" class="btn-secondary" onclick="emailMyResults()">Email my result to myself</button>
           </div>
         </div>
 
@@ -722,17 +770,16 @@
       return Math.round((total / (answered * 4)) * 100);
     }
 
-    function calculateScore(){
+    function buildScores(){
       const process = calculateSection(["q1","q2","q3"]);
       const behaviour = calculateSection(["q4","q5","q6"]);
       const management = calculateSection(["q7","q8","q9"]);
       const leadership = calculateSection(["q10","q11","q12"]);
 
-      const scores = [process, behaviour, management, leadership].filter(v => v !== null);
+      const scores = [process, behaviour, management, leadership];
 
-      if(scores.length < 4){
-        alert("Please answer all 12 questions before viewing your result.");
-        return;
+      if(scores.includes(null)){
+        return null;
       }
 
       const overall = Math.round((process + behaviour + management + leadership) / 4);
@@ -742,71 +789,130 @@
 
       if(overall <= 40){
         title = "Sales Effort Stage";
-        summary = "Your results suggest the team may be relying heavily on individual effort rather than a structured commercial system. This often creates inconsistent forecasting, uneven performance, and too much dependence on a small number of people.";
+        summary = "Your result suggests the team may be relying heavily on individual effort rather than a consistent commercial system. This often creates inconsistent forecasting, uneven performance, and too much dependence on a small number of people.";
       } else if(overall <= 70){
         title = "Developing Sales Engine";
-        summary = "Your organisation likely has strong foundations, but key parts of the system are not yet consistent enough to produce predictable performance. This is often the stage where management rhythm and frontline accountability need sharpening.";
+        summary = "Your organisation likely has strong foundations, but key parts of the system are not yet consistent enough to produce predictable performance. This is often where management rhythm and frontline accountability need sharpening.";
       } else {
         title = "High Performance Engine";
-        summary = "Your results suggest a strong commercial foundation with visible discipline across leadership, management, and the sales team. The next opportunity is usually refinement, consistency, and compounding performance gains over time.";
+        summary = "Your result suggests a strong commercial foundation with visible discipline across leadership, management, and the sales team. The next opportunity is usually refinement, consistency, and compounding performance gains.";
       }
 
-      document.getElementById("scoreNumber").textContent = overall + "%";
-      document.getElementById("scoreTitle").textContent = title;
-      document.getElementById("scoreSummary").textContent = summary;
-
-      document.getElementById("processScore").textContent = process + "%";
-      document.getElementById("behaviourScore").textContent = behaviour + "%";
-      document.getElementById("managementScore").textContent = management + "%";
-      document.getElementById("leadershipScore").textContent = leadership + "%";
-
-      document.getElementById("resultsBox").classList.add("show");
-      document.getElementById("resultsBox").scrollIntoView({ behavior: "smooth", block: "start" });
+      return { process, behaviour, management, leadership, overall, title, summary };
     }
 
-    function sendResults(){
-      const process = calculateSection(["q1","q2","q3"]);
-      const behaviour = calculateSection(["q4","q5","q6"]);
-      const management = calculateSection(["q7","q8","q9"]);
-      const leadership = calculateSection(["q10","q11","q12"]);
+    function showStatus(message, type){
+      const box = document.getElementById("statusMessage");
+      box.className = "status-message show " + (type === "error" ? "status-error" : "status-success");
+      box.textContent = message;
+    }
 
-      const scores = [process, behaviour, management, leadership].filter(v => v !== null);
+    function clearStatus(){
+      const box = document.getElementById("statusMessage");
+      box.className = "status-message";
+      box.textContent = "";
+    }
 
-      if(scores.length < 4){
-        alert("Please answer all 12 questions before emailing your result.");
+    function validateCapture(){
+      const name = document.getElementById("name").value.trim();
+      const company = document.getElementById("company").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if(!name || !company || !email){
+        showStatus("Please enter your name, company, and email to unlock your result.", "error");
+        return false;
+      }
+
+      return { name, company, email };
+    }
+
+    async function submitDiagnostic(){
+      clearStatus();
+
+      const scores = buildScores();
+      if(!scores){
+        showStatus("Please answer all 12 questions before unlocking your result.", "error");
         return;
       }
 
-      const overall = Math.round((process + behaviour + management + leadership) / 4);
+      const capture = validateCapture();
+      if(!capture) return;
 
-      let title = "";
-      if(overall <= 40){
-        title = "Sales Effort Stage";
-      } else if(overall <= 70){
-        title = "Developing Sales Engine";
-      } else {
-        title = "High Performance Engine";
+      const payload = {
+        name: capture.name,
+        company: capture.company,
+        email: capture.email,
+        overall_score: scores.overall + "%",
+        result_category: scores.title,
+        sales_process: scores.process + "%",
+        sales_team_behaviour: scores.behaviour + "%",
+        sales_management: scores.management + "%",
+        leadership_visibility: scores.leadership + "%"
+      };
+
+      try {
+        const response = await fetch("YOUR_FORM_ENDPOINT_HERE", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if(!response.ok){
+          throw new Error("Form submission failed");
+        }
+
+        renderResults(scores);
+        showStatus("Your result has been saved. Scroll down to view your score.", "success");
+
+      } catch (error){
+        showStatus("Your result could not be saved yet. Add your form endpoint and try again.", "error");
+      }
+    }
+
+    function renderResults(scores){
+      document.getElementById("scoreNumber").textContent = scores.overall + "%";
+      document.getElementById("scoreTitle").textContent = scores.title;
+      document.getElementById("scoreSummary").textContent = scores.summary;
+
+      document.getElementById("processScore").textContent = scores.process + "%";
+      document.getElementById("behaviourScore").textContent = scores.behaviour + "%";
+      document.getElementById("managementScore").textContent = scores.management + "%";
+      document.getElementById("leadershipScore").textContent = scores.leadership + "%";
+
+      const resultsBox = document.getElementById("resultsBox");
+      resultsBox.classList.add("show");
+      resultsBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function emailMyResults(){
+      const scores = buildScores();
+      if(!scores){
+        alert("Please complete the diagnostic first.");
+        return;
       }
 
       const name = document.getElementById("name").value.trim();
       const company = document.getElementById("company").value.trim();
       const email = document.getElementById("email").value.trim();
 
-      const subject = encodeURIComponent("SaleSycle Diagnostic Result" + (company ? ", " + company : ""));
+      const subject = encodeURIComponent("My SaleSycle Sales Engine Diagnostic Result");
       const body = encodeURIComponent(
         "Name, " + name + "\\n" +
         "Company, " + company + "\\n" +
         "Email, " + email + "\\n\\n" +
-        "Overall Sales Engine Score, " + overall + "%\\n" +
-        "Result Category, " + title + "\\n\\n" +
-        "Sales Process, " + process + "%\\n" +
-        "Sales Team Behaviour, " + behaviour + "%\\n" +
-        "Sales Management Rhythm, " + management + "%\\n" +
-        "Leadership Visibility, " + leadership + "%\\n\\n" +
-        "Please contact me to discuss these results."
+        "Overall Score, " + scores.overall + "%\\n" +
+        "Result Category, " + scores.title + "\\n\\n" +
+        "Sales Process, " + scores.process + "%\\n" +
+        "Sales Team Behaviour, " + scores.behaviour + "%\\n" +
+        "Sales Management, " + scores.management + "%\\n" +
+        "Leadership Visibility, " + scores.leadership + "%\\n\\n" +
+        "Summary,\\n" + scores.summary
       );
 
-      window.location.href = "mailto:enquiries@salesycle.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
     }
   </script>
 
