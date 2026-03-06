@@ -3,97 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <title>Programmes | SaleSycle</title>
-  <meta name="description" content="Structured programmes, tailored execution. Align leadership, accelerate sales management, and elevate frontline sales performance." />
+  <meta name="description" content="Structured programmes and tailored execution for leadership alignment, sales management acceleration, and frontline performance uplift." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     :root{
-      --bg:#0f172a;
-      --frame:#0b1220;
+      --bg:#0F172A;
+      --frame:#0B1220;
       --panel:#111827;
-      --text:#e5e7eb;
-      --muted:#a1a1aa;
+      --text:#E5E7EB;
+      --muted:#A1A1AA;
       --line:rgba(255,255,255,0.05);
-      --cyan:#07e9d6;
-      --magenta:#cb6ce6;
-      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --cyan:#07E9D6;
+      --magenta:#CB6CE6;
+      --shadow:0 14px 36px rgba(0,0,0,0.28);
     }
-    *{ box-sizing:border-box; }
-    body{ margin:0; font-family:Arial,sans-serif; background:var(--bg); color:var(--text); }
-    a{ text-decoration:none; color:inherit; }
-    .container{ max-width:1040px; margin:0 auto; padding:0 22px; }
 
-    .header{ background:var(--frame); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1000; }
-    .nav{ display:flex; justify-content:space-between; align-items:center; padding:18px 0; gap:18px; }
-    .nav-links{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:18px; }
-    .nav-links a{ color:var(--muted); font-size:15px; transition:0.25s ease; padding:6px 2px; }
-    .nav-links a:hover{ color:var(--cyan); }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-    section{ padding:72px 0; }
+    .header{
+      background:var(--frame);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding:18px 0;
+    }
+
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:18px;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+      font-size:15px;
+      padding:6px 2px;
+      transition:0.25s ease;
+    }
+
+    .nav-links a:hover{color:var(--cyan);}
+
+    section{padding:76px 0;}
 
     .hero{
-      padding:92px 0 54px;
+      padding:96px 0 62px;
       text-align:center;
       position:relative;
       overflow:hidden;
     }
+
     .hero::before{
       content:"";
       position:absolute;
-      inset:-140px -140px auto -140px;
+      inset:-120px -120px auto -120px;
       height:420px;
       background:
-        radial-gradient(closest-side, rgba(7,233,214,0.14), rgba(7,233,214,0) 70%),
-        radial-gradient(closest-side, rgba(203,108,230,0.12), rgba(203,108,230,0) 70%);
+        radial-gradient(closest-side, rgba(7,233,214,0.18), rgba(7,233,214,0) 70%),
+        radial-gradient(closest-side, rgba(203,108,230,0.16), rgba(203,108,230,0) 72%);
       pointer-events:none;
     }
-    .hero > .container{ position:relative; z-index:1; }
 
-    .hero h1{
-      margin:0 0 14px;
-      font-size:42px;
-      background:linear-gradient(90deg, var(--cyan), var(--magenta));
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    .hero .container{position:relative;z-index:1;}
+
+    h1{
+      margin:0 0 16px;
+      font-size:46px;
+      line-height:1.1;
+      background:linear-gradient(90deg,var(--cyan),var(--magenta));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
+
     .hero p{
       margin:0 auto;
-      max-width:860px;
+      max-width:820px;
       color:var(--muted);
+      font-size:18px;
       line-height:1.75;
-      font-size:17.5px;
+    }
+
+    .intro-panel{
+      margin-top:28px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .intro-panel p{
+      margin:0;
+      font-size:15px;
+      line-height:1.75;
+      color:var(--muted);
     }
 
     .grid{
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
+      grid-template-columns:repeat(3,1fr);
       gap:18px;
-      margin-top:34px;
+      margin-top:32px;
     }
+
     .card{
       background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
       border:1px solid rgba(255,255,255,0.06);
-      border-radius:16px;
+      border-radius:18px;
       padding:24px;
       transition:0.25s ease;
     }
+
     .card:hover{
       transform:translateY(-2px);
       box-shadow:var(--shadow);
       border-color:rgba(7,233,214,0.16);
     }
-    .card h3{ margin:0 0 10px; font-size:18px; color:var(--cyan); }
-    .card p{ margin:0; color:var(--muted); line-height:1.7; font-size:14.8px; }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:19px;
+      color:var(--cyan);
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:14.8px;
+    }
 
     .band{
       background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-top:1px solid rgba(255,255,255,0.05);
-      border-bottom:1px solid rgba(255,255,255,0.05);
-      padding:64px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-    .band h2{ margin:0 0 12px; font-size:26px; }
-    .band p{ margin:0; color:var(--muted); line-height:1.75; max-width:900px; }
 
-    .btn{
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .panel{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:22px;
+    }
+
+    .panel h2{
+      margin:0 0 10px;
+      font-size:24px;
+    }
+
+    .panel p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:15px;
+    }
+
+    .bullet-list{
+      margin-top:14px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:14.8px;
+    }
+
+    .bullet-list div{
+      margin:8px 0;
+    }
+
+    .cta-row{
+      margin-top:22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn-primary{
       display:inline-block;
       background:var(--cyan);
       color:var(--frame);
@@ -101,21 +201,50 @@
       border-radius:12px;
       font-weight:bold;
       transition:0.25s ease;
-      margin-top:18px;
     }
-    .btn:hover{ box-shadow:0 0 18px rgba(7,233,214,0.35); transform:translateY(-1px); }
 
-    .footer{ background:var(--frame); padding:56px 0 28px; border-top:1px solid var(--line); margin-top:24px; }
-    .footer-grid{ display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:34px; }
-    .footer h4{ margin:0 0 12px; }
-    .footer p, .footer a{ color:var(--muted); font-size:14px; line-height:1.7; }
-    .footer a:hover{ color:var(--cyan); }
-    .footer-bottom{ text-align:center; margin-top:34px; font-size:13px; color:#6b7280; border-top:1px solid var(--line); padding-top:18px; }
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 0 18px rgba(7,233,214,0.35);
+    }
 
-    @media (max-width: 980px){
-      .grid{ grid-template-columns:1fr; }
-      .footer-grid{ grid-template-columns:1fr; }
-      .hero h1{ font-size:36px; }
+    .footer{
+      background:var(--frame);
+      padding:56px 0 28px;
+      border-top:1px solid var(--line);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr;
+      gap:34px;
+    }
+
+    .footer h4{margin:0 0 12px;}
+    .footer p,.footer a{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .footer a:hover{color:var(--cyan);}
+
+    .footer-bottom{
+      text-align:center;
+      margin-top:34px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:#6B7280;
+      font-size:13px;
+    }
+
+    @media (max-width:980px){
+      h1{font-size:38px;}
+      .grid,
+      .split,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -140,36 +269,65 @@
     <div class="container">
       <h1>Structured programmes, tailored execution</h1>
       <p>
-        Every organisation is different. The principles of predictable performance are not.
-        We bring a clear structure, then tailor delivery to your culture, leadership, and sales environment.
+        Every business is different. The principles of predictable performance are not.
+        SaleSycle programmes give senior leaders a clear route to stronger alignment, stronger management discipline, and better sales team output.
       </p>
+
+      <div class="intro-panel">
+        <p>
+          These are not off the shelf training packages. They are structured engagement models, adapted to your growth stage, leadership maturity, and commercial environment.
+        </p>
+      </div>
 
       <div class="grid">
         <div class="card">
-          <h3>Leadership alignment</h3>
-          <p>Clarity of direction, standards, expectations, and commercial language that stays consistent.</p>
+          <h3>Leadership Alignment</h3>
+          <p>
+            Clarify commercial direction, expectations, and non negotiables. This programme helps leaders set the tone, remove ambiguity, and create the conditions for consistent execution.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Sales management acceleration</h3>
-          <p>Coaching rhythm, pipeline discipline, and accountability structures that drive daily execution.</p>
+          <h3>Sales Management Acceleration</h3>
+          <p>
+            Equip managers to coach better, inspect better, and reinforce standards more effectively. This is where strategy starts translating into daily performance.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Frontline sales performance</h3>
-          <p>Mentorship, practical frameworks, and live support that lifts behaviours, confidence, and output.</p>
+          <h3>Frontline Sales Performance</h3>
+          <p>
+            Support the sales team with practical frameworks, stronger habits, live coaching, and accountability that improves output, not just reporting.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="band">
-    <div class="container">
-      <h2>Not sure where to start</h2>
-      <p>
-        Most teams do not need more motivation. They need clarity.
-        A structured diagnostic identifies gaps in leadership alignment, management discipline, and frontline execution,
-        then maps a practical route forward.
-      </p>
-      <a class="btn" href="contact.html">Request a diagnostic</a>
+    <div class="container split">
+      <div class="panel">
+        <h2>Who this works best for</h2>
+        <p>
+          SaleSycle works best with established B2B organisations that have capable people but inconsistent commercial performance.
+        </p>
+        <div class="bullet-list">
+          <div>5 to 20 salespeople</div>
+          <div>stagnant or uneven revenue growth</div>
+          <div>managers who need more coaching structure</div>
+          <div>leaders who want greater visibility and predictability</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Where many teams start</h2>
+        <p>
+          Most teams do not need more motivation. They need clarity. A structured diagnostic identifies the friction points in leadership, management, and frontline behaviour, then maps a sensible route forward.
+        </p>
+        <div class="cta-row">
+          <a class="btn-primary" href="contact.html">Request a diagnostic</a>
+        </div>
+      </div>
     </div>
   </section>
 
