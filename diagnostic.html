@@ -209,7 +209,7 @@
       position:relative;
     }
 
-    .option-card input{
+    .option-card input[type="radio"]{
       position:absolute;
       opacity:0;
       pointer-events:none;
@@ -228,7 +228,7 @@
       transition:0.2s ease;
     }
 
-    .option-card input:checked + label{
+    .option-card input[type="radio"]:checked + label{
       border-color:rgba(7,233,214,0.45);
       background:rgba(7,233,214,0.10);
       color:var(--text);
@@ -288,11 +288,39 @@
       grid-column:1 / -1;
     }
 
-    .consent{
+    .data-note{
       margin-top:14px;
       font-size:13px;
       color:var(--muted);
       line-height:1.6;
+    }
+
+    .consent-box{
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .checkbox-row{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+
+    .checkbox-row input[type="checkbox"]{
+      margin-top:2px;
+      accent-color: var(--cyan);
+      transform:scale(1.1);
+      cursor:pointer;
+    }
+
+    .checkbox-row label{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+      cursor:pointer;
     }
 
     .button-row{
@@ -680,8 +708,15 @@
             </div>
           </div>
 
-          <div class="consent">
-            We’ll only use your details to save or discuss your diagnostic result.
+          <div class="data-note">
+            We use your details to save your diagnostic result and, if appropriate, contact you about that result.
+          </div>
+
+          <div class="consent-box">
+            <div class="checkbox-row">
+              <input type="checkbox" id="marketingConsent" />
+              <label for="marketingConsent">I am happy for SaleSycle to contact me by email to discuss my diagnostic result and relevant services.</label>
+            </div>
           </div>
 
           <div class="button-row">
@@ -838,10 +873,13 @@
       const capture = validateCapture();
       if(!capture) return;
 
+      const consent = document.getElementById("marketingConsent").checked ? "Yes" : "No";
+
       const payload = {
         name: capture.name,
         company: capture.company,
         email: capture.email,
+        marketing_consent: consent,
         overall_score: scores.overall + "%",
         result_category: scores.title,
         sales_process: scores.process + "%",
