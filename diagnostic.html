@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sales Engine Diagnostic | SaleSycle</title>
-  <meta name="description" content="Assess the strength of your sales engine across process, behaviour, management rhythm, and leadership visibility." />
+  <meta name="description" content="Take the SaleSycle Sales Engine Diagnostic to assess sales process, team behaviour, management rhythm, and leadership visibility." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -22,7 +22,6 @@
     }
 
     *{box-sizing:border-box;}
-
     body{
       margin:0;
       font-family:Arial,sans-serif;
@@ -157,9 +156,7 @@
 
     .mini-points div{margin:6px 0;}
 
-    .diagnostic-form{
-      margin-top:30px;
-    }
+    .diagnostic-form{margin-top:30px;}
 
     .section-block{
       margin-bottom:20px;
@@ -205,9 +202,7 @@
       gap:10px;
     }
 
-    .option-card{
-      position:relative;
-    }
+    .option-card{position:relative;}
 
     .option-card input[type="radio"]{
       position:absolute;
@@ -284,9 +279,7 @@
       font-size:14px;
     }
 
-    .full-width{
-      grid-column:1 / -1;
-    }
+    .full-width{grid-column:1 / -1;}
 
     .data-note{
       margin-top:14px;
@@ -406,6 +399,33 @@
       font-size:15px;
     }
 
+    .dynamic-feedback{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .feedback-card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:14px;
+      padding:16px;
+    }
+
+    .feedback-card strong{
+      display:block;
+      margin-bottom:8px;
+      color:var(--text);
+      font-size:16px;
+    }
+
+    .feedback-card span{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
     .result-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -447,7 +467,6 @@
     }
 
     .footer h4{margin:0 0 12px;}
-
     .footer p,.footer a{
       color:var(--muted);
       font-size:14px;
@@ -455,7 +474,6 @@
     }
 
     .footer a:hover{color:var(--cyan);}
-
     .footer-bottom{
       text-align:center;
       margin-top:34px;
@@ -470,21 +488,17 @@
       .intro-grid,
       .contact-capture,
       .result-grid,
+      .dynamic-feedback,
       .footer-grid{
         grid-template-columns:1fr;
       }
-      .options{
-        grid-template-columns:1fr;
-      }
-      .full-width{
-        grid-column:auto;
-      }
+      .options{grid-template-columns:1fr;}
+      .full-width{grid-column:auto;}
     }
   </style>
 </head>
 
 <body>
-
   <div class="header">
     <div class="container nav">
       <img src="logo.png" alt="SaleSycle Logo" style="height:120px;" />
@@ -536,7 +550,6 @@
         <div class="section-block">
           <h3>Sales Process</h3>
           <p>Assess how clearly opportunities move and how reliably the commercial process is being followed.</p>
-
           <div class="question">
             <div class="question-title">1. Do your salespeople follow a clearly defined and consistent sales process when progressing opportunities?</div>
             <div class="options">
@@ -547,7 +560,6 @@
               <div class="option-card"><input type="radio" name="q1" value="0" id="q1e"><label for="q1e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">2. Is discovery with customers structured and designed to uncover commercial impact rather than just product needs?</div>
             <div class="options">
@@ -558,7 +570,6 @@
               <div class="option-card"><input type="radio" name="q2" value="0" id="q2e"><label for="q2e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">3. Do opportunities progress through your pipeline based on agreed commercial commitments rather than optimistic forecasting?</div>
             <div class="options">
@@ -574,7 +585,6 @@
         <div class="section-block">
           <h3>Sales Team Behaviour</h3>
           <p>Assess whether the sales team is working with consistency, preparation, and stronger commercial conversations.</p>
-
           <div class="question">
             <div class="question-title">4. Do salespeople consistently prepare for customer meetings with a clear objective and structured questioning approach?</div>
             <div class="options">
@@ -585,7 +595,6 @@
               <div class="option-card"><input type="radio" name="q4" value="0" id="q4e"><label for="q4e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">5. Are sales conversations focused on understanding the customer’s business challenges rather than presenting product features?</div>
             <div class="options">
@@ -596,7 +605,6 @@
               <div class="option-card"><input type="radio" name="q5" value="0" id="q5e"><label for="q5e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">6. Does your team confidently build and present business cases that justify investment from the customer perspective?</div>
             <div class="options">
@@ -612,7 +620,6 @@
         <div class="section-block">
           <h3>Sales Management Rhythm</h3>
           <p>Assess whether managers are reinforcing the system in a visible, practical, and commercially useful way.</p>
-
           <div class="question">
             <div class="question-title">7. Do sales managers run structured pipeline reviews that focus on deal quality rather than just deal size?</div>
             <div class="options">
@@ -623,7 +630,6 @@
               <div class="option-card"><input type="radio" name="q7" value="0" id="q7e"><label for="q7e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">8. Are sales managers actively coaching salespeople on live opportunities rather than primarily reviewing activity numbers?</div>
             <div class="options">
@@ -634,7 +640,6 @@
               <div class="option-card"><input type="radio" name="q8" value="0" id="q8e"><label for="q8e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">9. Is there a consistent rhythm of performance conversations between managers and the sales team?</div>
             <div class="options">
@@ -650,7 +655,6 @@
         <div class="section-block">
           <h3>Leadership Visibility</h3>
           <p>Assess whether senior leadership is clearly backing the commercial system and reinforcing standards.</p>
-
           <div class="question">
             <div class="question-title">10. Does senior leadership clearly communicate what good sales performance looks like within the organisation?</div>
             <div class="options">
@@ -661,7 +665,6 @@
               <div class="option-card"><input type="radio" name="q10" value="0" id="q10e"><label for="q10e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">11. Are commercial expectations and performance standards visible across the sales organisation?</div>
             <div class="options">
@@ -672,7 +675,6 @@
               <div class="option-card"><input type="radio" name="q11" value="0" id="q11e"><label for="q11e">Not sure</label></div>
             </div>
           </div>
-
           <div class="question">
             <div class="question-title">12. Do leaders actively reinforce the behaviours and disciplines that drive long term revenue performance?</div>
             <div class="options">
@@ -696,12 +698,10 @@
               <label for="name">Name</label>
               <input id="name" type="text" placeholder="Your name" required />
             </div>
-
             <div class="field">
               <label for="company">Company</label>
               <input id="company" type="text" placeholder="Company name" required />
             </div>
-
             <div class="field full-width">
               <label for="email">Email</label>
               <input id="email" type="email" placeholder="Your email address" required />
@@ -730,6 +730,17 @@
           <div id="scoreNumber" class="score">0%</div>
           <h2 id="scoreTitle">Your result</h2>
           <p id="scoreSummary"></p>
+
+          <div class="dynamic-feedback">
+            <div class="feedback-card">
+              <strong>What this usually means</strong>
+              <span id="dynamicMeaning">Your result will unlock tailored feedback here.</span>
+            </div>
+            <div class="feedback-card">
+              <strong>Most useful next step</strong>
+              <span id="dynamicNextStep">Complete the diagnostic to see the most sensible next move.</span>
+            </div>
+          </div>
 
           <div class="result-grid">
             <div class="result-card">
@@ -792,7 +803,6 @@
     function calculateSection(questions){
       let total = 0;
       let answered = 0;
-
       questions.forEach(q => {
         const value = getAnswerValue(q);
         if(value !== null){
@@ -800,7 +810,6 @@
           answered += 1;
         }
       });
-
       if(answered === 0) return null;
       return Math.round((total / (answered * 4)) * 100);
     }
@@ -810,30 +819,34 @@
       const behaviour = calculateSection(["q4","q5","q6"]);
       const management = calculateSection(["q7","q8","q9"]);
       const leadership = calculateSection(["q10","q11","q12"]);
-
       const scores = [process, behaviour, management, leadership];
-
-      if(scores.includes(null)){
-        return null;
-      }
+      if(scores.includes(null)) return null;
 
       const overall = Math.round((process + behaviour + management + leadership) / 4);
 
       let title = "";
       let summary = "";
+      let meaning = "";
+      let nextStep = "";
 
       if(overall <= 40){
         title = "Sales Effort Stage";
-        summary = "Your result suggests the team may be relying heavily on individual effort rather than a consistent commercial system. This often creates inconsistent forecasting, uneven performance, and too much dependence on a small number of people.";
+        summary = "Your result suggests the team may be relying heavily on individual effort rather than a consistent commercial system.";
+        meaning = "Performance is likely being distorted by uneven habits, unclear management rhythm, and limited process consistency.";
+        nextStep = "Clarify the current reality, identify where the cycle breaks down, and create stronger leadership and management alignment first.";
       } else if(overall <= 70){
         title = "Developing Sales Engine";
-        summary = "Your organisation likely has strong foundations, but key parts of the system are not yet consistent enough to produce predictable performance. This is often where management rhythm and frontline accountability need sharpening.";
+        summary = "Your organisation likely has strong foundations, but key parts of the system are not yet consistent enough to produce predictable performance.";
+        meaning = "The team probably has capability, but execution is being weakened by inconsistency between leadership intent, manager reinforcement, and frontline behaviour.";
+        nextStep = "Tighten management rhythm, sharpen behavioural standards, and make the strongest parts of the process more visible across the team.";
       } else {
         title = "High Performance Engine";
-        summary = "Your result suggests a strong commercial foundation with visible discipline across leadership, management, and the sales team. The next opportunity is usually refinement, consistency, and compounding performance gains.";
+        summary = "Your result suggests a strong commercial foundation with visible discipline across leadership, management, and the sales team.";
+        meaning = "You appear to have a credible system in place. The biggest opportunity is likely refinement, consistency, and compounding gains rather than wholesale redesign.";
+        nextStep = "Focus on elevating what already works, removing remaining friction points, and building more predictable revenue from a stronger engine.";
       }
 
-      return { process, behaviour, management, leadership, overall, title, summary };
+      return { process, behaviour, management, leadership, overall, title, summary, meaning, nextStep };
     }
 
     function showStatus(message, type){
@@ -852,18 +865,15 @@
       const name = document.getElementById("name").value.trim();
       const company = document.getElementById("company").value.trim();
       const email = document.getElementById("email").value.trim();
-
       if(!name || !company || !email){
         showStatus("Please enter your name, company, and email to unlock your result.", "error");
         return false;
       }
-
       return { name, company, email };
     }
 
     async function submitDiagnostic(){
       clearStatus();
-
       const scores = buildScores();
       if(!scores){
         showStatus("Please answer all 12 questions before unlocking your result.", "error");
@@ -898,13 +908,10 @@
           body: JSON.stringify(payload)
         });
 
-        if(!response.ok){
-          throw new Error("Form submission failed");
-        }
+        if(!response.ok) throw new Error("Form submission failed");
 
         renderResults(scores);
         showStatus("Your result has been saved. Scroll down to view your score.", "success");
-
       } catch (error){
         showStatus("Something went wrong while saving your result. Please try again.", "error");
       }
@@ -914,6 +921,8 @@
       document.getElementById("scoreNumber").textContent = scores.overall + "%";
       document.getElementById("scoreTitle").textContent = scores.title;
       document.getElementById("scoreSummary").textContent = scores.summary;
+      document.getElementById("dynamicMeaning").textContent = scores.meaning;
+      document.getElementById("dynamicNextStep").textContent = scores.nextStep;
 
       document.getElementById("processScore").textContent = scores.process + "%";
       document.getElementById("behaviourScore").textContent = scores.behaviour + "%";
@@ -947,12 +956,12 @@
         "Sales Team Behaviour, " + scores.behaviour + "%\n" +
         "Sales Management, " + scores.management + "%\n" +
         "Leadership Visibility, " + scores.leadership + "%\n\n" +
-        "Summary,\n" + scores.summary
+        "Meaning,\n" + scores.meaning + "\n\n" +
+        "Suggested Next Step,\n" + scores.nextStep
       );
 
       window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
     }
   </script>
-
 </body>
 </html>
