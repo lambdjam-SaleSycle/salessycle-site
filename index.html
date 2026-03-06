@@ -2,31 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SaleSycle, Predictable Performance, Built Sustainably</title>
-  <meta name="description" content="SaleSycle partners with senior leaders to align leadership, strengthen management discipline, and elevate sales team accountability for predictable, sustainable revenue growth." />
+  <title>SaleSycle | Predictable Performance, Built Sustainably</title>
+  <meta name="description" content="SaleSycle turns sales teams into real growth engines through structured leadership alignment, disciplined sales management, and accountable frontline performance." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     :root{
-      --bg:#0f172a;
-      --frame:#0b1220;
+      --bg:#0F172A;
+      --frame:#0B1220;
       --panel:#111827;
-      --text:#e5e7eb;
-      --muted:#a1a1aa;
+      --text:#E5E7EB;
+      --muted:#A1A1AA;
       --line:rgba(255,255,255,0.05);
-      --soft:rgba(255,255,255,0.03);
-      --cyan:#07e9d6;
-      --magenta:#cb6ce6;
-      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --cyan:#07E9D6;
+      --magenta:#CB6CE6;
+      --shadow:0 14px 36px rgba(0,0,0,0.28);
     }
 
-    *{ box-sizing:border-box; }
-    body{ margin:0; font-family: Arial, sans-serif; background:var(--bg); color:var(--text); }
-    a{ text-decoration:none; color:inherit; }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
 
-    .container{ max-width:1040px; margin:0 auto; padding:0 22px; }
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-    /* Header, locked look but with a little more breathing room */
     .header{
       background:var(--frame);
       border-bottom:1px solid var(--line);
@@ -34,185 +37,299 @@
       top:0;
       z-index:1000;
     }
+
     .nav{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:18px 0;
       gap:18px;
+      padding:18px 0;
     }
+
     .nav-links{
       display:flex;
       flex-wrap:wrap;
       justify-content:flex-end;
       gap:18px;
     }
+
     .nav-links a{
       color:var(--muted);
       font-size:15px;
-      transition:0.25s ease;
       padding:6px 2px;
+      transition:0.25s ease;
     }
-    .nav-links a:hover{ color:var(--cyan); }
 
-    /* Sections, decompressed */
-    section{ padding:72px 0; }
+    .nav-links a:hover{color:var(--cyan);}
+
+    section{padding:76px 0;}
 
     .hero{
-      padding:92px 0 64px;
+      padding:96px 0 68px;
       text-align:center;
       position:relative;
       overflow:hidden;
     }
+
     .hero::before{
       content:"";
       position:absolute;
       inset:-120px -120px auto -120px;
-      height:420px;
+      height:430px;
       background:
         radial-gradient(closest-side, rgba(7,233,214,0.18), rgba(7,233,214,0) 70%),
-        radial-gradient(closest-side, rgba(203,108,230,0.16), rgba(203,108,230,0) 70%);
-      filter: blur(2px);
+        radial-gradient(closest-side, rgba(203,108,230,0.16), rgba(203,108,230,0) 72%);
       pointer-events:none;
     }
-    .hero > .container{ position:relative; z-index:1; }
 
-    .hero h1{
+    .hero .container{position:relative;z-index:1;}
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:16px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    h1{
       margin:0 0 16px;
-      font-size:46px;
-      line-height:1.12;
-      background:linear-gradient(90deg, var(--cyan), var(--magenta));
+      font-size:50px;
+      line-height:1.08;
+      background:linear-gradient(90deg,var(--cyan),var(--magenta));
       -webkit-background-clip:text;
       -webkit-text-fill-color:transparent;
     }
+
     .hero p{
       margin:0 auto;
       max-width:820px;
-      font-size:18px;
-      line-height:1.7;
       color:var(--muted);
+      font-size:18px;
+      line-height:1.75;
     }
 
     .cta-row{
-      margin-top:26px;
+      margin-top:28px;
       display:flex;
-      gap:14px;
       justify-content:center;
       flex-wrap:wrap;
-    }
-    .btn-primary{
-      background:var(--cyan);
-      color:var(--frame);
-      padding:12px 24px;
-      border-radius:12px;
-      font-weight:bold;
-      display:inline-block;
-      transition:0.25s ease;
-    }
-    .btn-primary:hover{
-      box-shadow:0 0 18px rgba(7,233,214,0.35);
-      transform:translateY(-1px);
-    }
-    .btn-secondary{
-      border:2px solid var(--magenta);
-      color:var(--magenta);
-      padding:10px 22px;
-      border-radius:12px;
-      font-weight:bold;
-      display:inline-block;
-      transition:0.25s ease;
-      background:transparent;
-    }
-    .btn-secondary:hover{
-      box-shadow:0 0 18px rgba(203,108,230,0.22);
-      transform:translateY(-1px);
+      gap:14px;
     }
 
-    .grid{
+    .btn-primary{
+      display:inline-block;
+      background:var(--cyan);
+      color:var(--frame);
+      padding:13px 24px;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.25s ease;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 0 18px rgba(7,233,214,0.35);
+    }
+
+    .btn-secondary{
+      display:inline-block;
+      padding:11px 22px;
+      border:2px solid var(--magenta);
+      color:var(--magenta);
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.25s ease;
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 0 18px rgba(203,108,230,0.22);
+    }
+
+    .trust-strip{
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
       margin-top:34px;
     }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+
+    .trust-item{
+      background:rgba(255,255,255,0.03);
       border:1px solid rgba(255,255,255,0.06);
       border-radius:16px;
+      padding:20px;
+    }
+
+    .trust-item strong{
+      display:block;
+      margin-bottom:8px;
+      color:var(--text);
+      font-size:16px;
+    }
+
+    .trust-item span{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .section-title{
+      margin:0 0 14px;
+      font-size:30px;
+    }
+
+    .section-copy{
+      margin:0;
+      max-width:820px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:17px;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:18px;
       padding:24px;
       transition:0.25s ease;
     }
-    .card:hover{
+
+    .panel:hover{
       transform:translateY(-2px);
       box-shadow:var(--shadow);
       border-color:rgba(7,233,214,0.16);
     }
-    .card h3{
+
+    .panel h3{
       margin:0 0 10px;
-      font-size:18px;
+      font-size:19px;
       color:var(--cyan);
     }
-    .card p{
+
+    .panel p{
       margin:0;
       color:var(--muted);
-      line-height:1.7;
+      line-height:1.75;
       font-size:14.8px;
+    }
+
+    .engine-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .mini-tag{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(203,108,230,0.10);
+      border:1px solid rgba(203,108,230,0.16);
+      color:var(--magenta);
+      font-size:12px;
+      font-weight:bold;
     }
 
     .band{
       background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-top:1px solid rgba(255,255,255,0.05);
-      border-bottom:1px solid rgba(255,255,255,0.05);
-      padding:64px 0;
-    }
-    .band .split{
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap:22px;
-      align-items:start;
-    }
-    .band h2{
-      margin:0 0 12px;
-      font-size:26px;
-      color:var(--text);
-    }
-    .band p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
 
-    /* Footer, locked */
+    .aide-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:24px;
+    }
+
+    .aide-card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .aide-card strong{
+      display:block;
+      margin-bottom:8px;
+      color:var(--cyan);
+      font-size:16px;
+    }
+
+    .aide-card span{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .closing{
+      text-align:center;
+    }
+
+    .closing p{
+      max-width:760px;
+      margin:0 auto;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:17px;
+    }
+
     .footer{
       background:var(--frame);
       padding:56px 0 28px;
       border-top:1px solid var(--line);
     }
+
     .footer-grid{
       display:grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
+      grid-template-columns:1.2fr 1fr 1fr;
       gap:34px;
     }
-    .footer h4{ margin:0 0 12px; }
+
+    .footer h4{
+      margin:0 0 12px;
+    }
+
     .footer p, .footer a{
       color:var(--muted);
       font-size:14px;
       line-height:1.7;
     }
-    .footer a:hover{ color:var(--cyan); }
+
+    .footer a:hover{color:var(--cyan);}
+
     .footer-bottom{
       text-align:center;
       margin-top:34px;
-      font-size:13px;
-      color:#6b7280;
-      border-top:1px solid var(--line);
       padding-top:18px;
+      border-top:1px solid var(--line);
+      color:#6B7280;
+      font-size:13px;
     }
 
-    @media (max-width: 980px){
-      .grid{ grid-template-columns:1fr; }
-      .band .split{ grid-template-columns:1fr; }
-      .footer-grid{ grid-template-columns:1fr; }
-      .hero h1{ font-size:38px; }
+    @media (max-width:980px){
+      h1{font-size:40px;}
+      .trust-strip,
+      .engine-grid,
+      .aide-row,
+      .split,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -235,51 +352,118 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Predictable Performance, Built Sustainably</h1>
+      <span class="eyebrow">SaleSycle turns sales teams into real growth engines</span>
+      <h1>Break the broken sales cycle</h1>
       <p>
-        SaleSycle is a transformational partner for SME and mid size teams.
-        We align leadership, strengthen sales management discipline, and elevate sales team accountability to unlock sustainable revenue growth.
+        SaleSycle helps established B2B organisations with stagnant or inconsistent growth reset their commercial rhythm.
+        We align leadership, strengthen sales management discipline, and elevate frontline accountability so better sales team performance leads to better revenue performance.
       </p>
 
       <div class="cta-row">
         <a class="btn-primary" href="contact.html">Start the conversation</a>
-        <a class="btn-secondary" href="how-we-work.html">See the AIDE framework</a>
+        <a class="btn-secondary" href="how-we-work.html">Explore AIDE</a>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Not training days</h3>
-          <p>Embedded change delivered inside your business, with cadence, follow through, and practical ownership.</p>
+      <div class="trust-strip">
+        <div class="trust-item">
+          <strong>Built for established B2B teams</strong>
+          <span>Ideal for organisations with 5 to 20 salespeople who know there is more value in the team than current results show.</span>
         </div>
-        <div class="card">
-          <h3>Systems plus behaviours</h3>
-          <p>Process clarity, pipeline discipline, coaching rhythm, and standards that teams adopt and use.</p>
+        <div class="trust-item">
+          <strong>More than training</strong>
+          <span>We do not deliver a workshop and disappear. We embed, guide, coach, and help leaders hold the new standard.</span>
         </div>
-        <div class="card">
-          <h3>Sales team accountability</h3>
-          <p>Clear expectations, practical support, and performance ownership where revenue is won or lost.</p>
+        <div class="trust-item">
+          <strong>Commercially measurable</strong>
+          <span>Forecasting, conversion, accountability, management rhythm, and revenue consistency all move together.</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div>
+        <h2 class="section-title">Why traditional sales training stalls</h2>
+        <p class="section-copy">
+          Most sales interventions create short term energy but not lasting change. Leadership language drifts, managers revert to old habits, and sales teams are left with ideas instead of systems. SaleSycle closes that gap by focusing on the full commercial environment, not just isolated skills.
+        </p>
+      </div>
+
+      <div class="panel">
+        <span class="mini-tag">What changes</span>
+        <h3>From effort to engine</h3>
+        <p>
+          We help organisations move from inconsistent effort and heroic selling into a repeatable commercial system that is visible, coached, measured, and sustainable.
+        </p>
       </div>
     </div>
   </section>
 
   <section class="band">
     <div class="container">
-      <div class="split">
-        <div>
-          <h2>Why most sales improvements stall</h2>
-          <p>
-            Leadership messaging drifts, managers coach inconsistently, and sales teams fall back into old habits.
-            SaleSycle rebuilds performance by aligning the top, equipping the middle, and elevating the front line with measurable standards.
-          </p>
+      <h2 class="section-title">The SaleSycle Growth Engine</h2>
+      <p class="section-copy">
+        We focus on the four connected elements that drive performance. When these are aligned, the sales team gets the structure, clarity, and support needed to perform consistently.
+      </p>
+
+      <div class="engine-grid">
+        <div class="panel">
+          <h3>Sales Process</h3>
+          <p>Clear stages, stronger discovery, better business cases, and consistent progress through the deal cycle.</p>
         </div>
-        <div class="card">
-          <h3 style="color:var(--magenta);">What you get</h3>
-          <p>
-            A clear path, a consistent cadence, better forecasting discipline, improved conversion behaviours,
-            and a stronger culture that supports retention.
-          </p>
+        <div class="panel">
+          <h3>Sales Team Behaviour</h3>
+          <p>Frontline accountability, practical selling habits, and more confidence in live customer conversations.</p>
         </div>
+        <div class="panel">
+          <h3>Sales Management Rhythm</h3>
+          <p>Coaching cadence, deal quality review, pipeline discipline, and measurable reinforcement from managers.</p>
+        </div>
+        <div class="panel">
+          <h3>Leadership Visibility</h3>
+          <p>Senior leaders setting the tone, backing the standards, and removing ambiguity around what good looks like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">How change is deployed</h2>
+      <p class="section-copy">
+        Our AIDE methodology gives structure to the transformation journey and keeps the work practical, visible, and commercially grounded.
+      </p>
+
+      <div class="aide-row">
+        <div class="aide-card">
+          <strong>Access</strong>
+          <span>Get close to the business, the team, the pressure points, and the commercial reality.</span>
+        </div>
+        <div class="aide-card">
+          <strong>Integrate</strong>
+          <span>Align leaders and managers, then cascade expectations and support into the sales team.</span>
+        </div>
+        <div class="aide-card">
+          <strong>Deploy</strong>
+          <span>Coach in real environments, reinforce new habits, and make better performance visible.</span>
+        </div>
+        <div class="aide-card">
+          <strong>Elevate</strong>
+          <span>Build confidence, tighten discipline, and turn early gains into sustained growth.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band closing">
+    <div class="container">
+      <h2 class="section-title">Ready to rebuild performance</h2>
+      <p>
+        If your team has capability but results still feel inconsistent, SaleSycle helps you turn commercial effort into a structured growth engine.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="contact.html">Talk to SaleSycle</a>
       </div>
     </div>
   </section>
