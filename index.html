@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sales Engine Diagnostic | SaleSycle</title>
-  <meta name="description" content="Take the SaleSycle Sales Engine Diagnostic to assess sales process, team behaviour, management rhythm, and leadership visibility." />
+  <title>Sales Consultancy for B2B Growth | SaleSycle</title>
+  <meta name="description" content="SaleSycle helps established B2B companies improve sales performance through leadership alignment, sales management discipline, and accountable frontline execution." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -17,73 +17,39 @@
       --cyan:#07E9D6;
       --magenta:#CB6CE6;
       --shadow:0 14px 36px rgba(0,0,0,0.28);
-      --success:#22c55e;
-      --error:#ef4444;
     }
-
     *{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);}
     a{text-decoration:none;color:inherit;}
-    .container{max-width:1100px;margin:0 auto;padding:0 24px;}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-    .header{
-      background:var(--frame);
-      border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      z-index:1000;
-    }
-
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:18px;
-      padding:18px 0;
-    }
-
-    .nav-links{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      gap:18px;
-    }
-
-    .nav-links a{
-      color:var(--muted);
-      font-size:15px;
-      padding:6px 2px;
-      transition:0.25s ease;
-    }
-
+    .header{background:var(--frame);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1000;}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 0;}
+    .nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:18px;}
+    .nav-links a{color:var(--muted);font-size:15px;padding:6px 2px;transition:0.25s ease;}
     .nav-links a:hover{color:var(--cyan);}
 
     section{padding:76px 0;}
 
     .hero{
-      padding:96px 0 54px;
+      padding:110px 0 82px;
       text-align:center;
       position:relative;
       overflow:hidden;
+      background:
+        linear-gradient(rgba(11,18,32,0.78), rgba(11,18,32,0.86)),
+        linear-gradient(120deg, rgba(7,233,214,0.10), rgba(203,108,230,0.08)),
+        url('sales-team-strategy.jpg') center center / cover no-repeat;
     }
-
     .hero::before{
       content:"";
       position:absolute;
-      inset:-120px -120px auto -120px;
-      height:420px;
+      inset:0;
       background:
-        radial-gradient(closest-side, rgba(7,233,214,0.18), rgba(7,233,214,0) 70%),
-        radial-gradient(closest-side, rgba(203,108,230,0.16), rgba(203,108,230,0) 72%);
+        radial-gradient(circle at top center, rgba(7,233,214,0.18), transparent 38%),
+        radial-gradient(circle at 70% 18%, rgba(203,108,230,0.16), transparent 34%);
       pointer-events:none;
     }
-
     .hero .container{position:relative;z-index:1;}
 
     .eyebrow{
@@ -91,15 +57,16 @@
       margin-bottom:16px;
       padding:8px 14px;
       border-radius:999px;
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.06);
-      color:var(--muted);
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#d1d5db;
       font-size:13px;
+      backdrop-filter:blur(6px);
     }
 
     h1{
       margin:0 0 16px;
-      font-size:46px;
+      font-size:52px;
       line-height:1.08;
       background:linear-gradient(90deg,var(--cyan),var(--magenta));
       -webkit-background-clip:text;
@@ -108,356 +75,164 @@
 
     .hero p{
       margin:0 auto;
-      max-width:860px;
-      color:var(--muted);
+      max-width:820px;
+      color:#d1d5db;
       font-size:18px;
-      line-height:1.75;
+      line-height:1.8;
+      text-shadow:0 1px 2px rgba(0,0,0,0.25);
     }
 
-    .hero-meta{
-      margin-top:20px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .intro-grid{
-      display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:18px;
+    .cta-row{
       margin-top:28px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
     }
+
+    .btn-primary,.btn-secondary,.btn-tertiary{
+      display:inline-block;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.25s ease;
+    }
+
+    .btn-primary{
+      background:var(--cyan);
+      color:var(--frame);
+      padding:13px 24px;
+    }
+
+    .btn-secondary{
+      padding:11px 22px;
+      border:2px solid var(--magenta);
+      color:#f3e8ff;
+      background:rgba(203,108,230,0.08);
+      backdrop-filter:blur(4px);
+    }
+
+    .btn-tertiary{
+      padding:11px 22px;
+      border:1px solid rgba(255,255,255,0.14);
+      color:#e5e7eb;
+      background:rgba(255,255,255,0.06);
+      backdrop-filter:blur(4px);
+    }
+
+    .btn-primary:hover,.btn-secondary:hover,.btn-tertiary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 0 18px rgba(255,255,255,0.12);
+    }
+
+    .trust-strip{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:36px;
+    }
+
+    .trust-item{
+      background:rgba(17,24,39,0.72);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      padding:20px;
+      backdrop-filter:blur(6px);
+    }
+
+    .trust-item strong{display:block;margin-bottom:8px;color:var(--text);font-size:16px;}
+    .trust-item span{color:#cbd5e1;font-size:14px;line-height:1.65;}
+
+    .section-title{margin:0 0 14px;font-size:30px;}
+    .section-copy{margin:0;max-width:820px;color:var(--muted);line-height:1.75;font-size:17px;}
+
+    .split{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px;align-items:start;}
 
     .panel{
       background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
       border:1px solid rgba(255,255,255,0.06);
       border-radius:18px;
       padding:24px;
+      transition:0.25s ease;
     }
 
-    .panel h2{
-      margin:0 0 10px;
-      font-size:24px;
-      color:var(--text);
+    .panel:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow);
+      border-color:rgba(7,233,214,0.16);
     }
 
-    .panel p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:15px;
-    }
+    .panel h3{margin:0 0 10px;font-size:19px;color:var(--cyan);}
+    .panel p{margin:0;color:var(--muted);line-height:1.75;font-size:14.8px;}
 
-    .mini-points{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.75;
-    }
-
-    .mini-points div{margin:6px 0;}
-
-    .diagnostic-form{margin-top:30px;}
-
-    .section-block{
-      margin-bottom:20px;
-      background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:18px;
-      padding:22px;
-    }
-
-    .section-block h3{
-      margin:0 0 10px;
-      font-size:22px;
-      color:var(--cyan);
-    }
-
-    .section-block p{
-      margin:0 0 18px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:14.8px;
-    }
-
-    .question{
-      padding:16px 0;
-      border-top:1px solid rgba(255,255,255,0.06);
-    }
-
-    .question:first-of-type{
-      border-top:none;
-      padding-top:0;
-    }
-
-    .question-title{
-      margin:0 0 12px;
-      font-size:16px;
-      line-height:1.55;
-      color:var(--text);
-    }
-
-    .options{
-      display:grid;
-      grid-template-columns:repeat(5, 1fr);
-      gap:10px;
-    }
-
-    .option-card{position:relative;}
-
-    .option-card input[type="radio"]{
-      position:absolute;
-      opacity:0;
-      pointer-events:none;
-    }
-
-    .option-card label{
-      display:block;
-      text-align:center;
-      padding:12px 10px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.08);
-      background:rgba(255,255,255,0.03);
-      color:var(--muted);
-      font-size:13px;
-      cursor:pointer;
-      transition:0.2s ease;
-    }
-
-    .option-card input[type="radio"]:checked + label{
-      border-color:rgba(7,233,214,0.45);
-      background:rgba(7,233,214,0.10);
-      color:var(--text);
-      box-shadow:0 0 14px rgba(7,233,214,0.12);
-    }
-
-    .capture-box{
-      margin-top:26px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:18px;
-      padding:24px;
-    }
-
-    .capture-box h3{
-      margin:0 0 10px;
-      font-size:24px;
-      color:var(--text);
-    }
-
-    .capture-box p{
-      margin:0 0 18px;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:15px;
-    }
-
-    .contact-capture{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-
-    .field{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-    }
-
-    .field label{
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .field input{
+    .engine-section{padding:40px 0 24px;}
+    .engine-image-wrap{margin-top:26px;text-align:center;}
+    .engine-image{
       width:100%;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.08);
-      background:rgba(255,255,255,0.03);
-      color:var(--text);
-      outline:none;
-      font-size:14px;
-    }
-
-    .full-width{grid-column:1 / -1;}
-
-    .data-note{
-      margin-top:14px;
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.6;
-    }
-
-    .consent-box{
-      margin-top:16px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.06);
-    }
-
-    .checkbox-row{
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-    }
-
-    .checkbox-row input[type="checkbox"]{
-      margin-top:2px;
-      accent-color: var(--cyan);
-      transform:scale(1.1);
-      cursor:pointer;
-    }
-
-    .checkbox-row label{
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.6;
-      cursor:pointer;
-    }
-
-    .button-row{
-      margin-top:22px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      align-items:center;
-    }
-
-    .btn-primary{
-      display:inline-block;
-      background:var(--cyan);
-      color:var(--frame);
-      padding:13px 22px;
-      border-radius:12px;
-      font-weight:bold;
-      border:none;
-      cursor:pointer;
-      transition:0.25s ease;
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-1px);
-      box-shadow:0 0 18px rgba(7,233,214,0.35);
-    }
-
-    .btn-secondary{
-      display:inline-block;
-      padding:11px 20px;
-      border:2px solid var(--magenta);
-      color:var(--magenta);
-      border-radius:12px;
-      font-weight:bold;
-      transition:0.25s ease;
-      background:transparent;
-      cursor:pointer;
-    }
-
-    .btn-secondary:hover{
-      transform:translateY(-1px);
-      box-shadow:0 0 18px rgba(203,108,230,0.22);
-    }
-
-    .status-message{
-      margin-top:14px;
-      font-size:14px;
-      line-height:1.6;
-      display:none;
-    }
-
-    .status-message.show{display:block;}
-    .status-success{color:var(--success);}
-    .status-error{color:var(--error);}
-
-    .results{
-      margin-top:28px;
-      display:none;
-      background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:18px;
-      padding:26px;
-    }
-
-    .results.show{display:block;}
-
-    .score{
-      font-size:48px;
-      font-weight:bold;
-      color:var(--cyan);
-      margin-bottom:8px;
-    }
-
-    .results h2{
-      margin:0 0 10px;
-      font-size:28px;
-    }
-
-    .results p{
-      margin:0 0 14px;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:15px;
-    }
-
-    .dynamic-feedback{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-
-    .feedback-card{
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.06);
-      border-radius:14px;
-      padding:16px;
-    }
-
-    .feedback-card strong{
+      max-width:980px;
       display:block;
-      margin-bottom:8px;
-      color:var(--text);
-      font-size:16px;
+      margin:0 auto;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
     }
-
-    .feedback-card span{
+    .engine-caption{
+      max-width:820px;
+      margin:16px auto 0;
       color:var(--muted);
-      font-size:13px;
-      line-height:1.65;
+      font-size:14px;
+      line-height:1.7;
+      text-align:center;
     }
 
-    .result-grid{
+    .engine-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .mini-tag{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(203,108,230,0.10);
+      border:1px solid rgba(203,108,230,0.16);
+      color:var(--magenta);
+      font-size:12px;
+      font-weight:bold;
+    }
+
+    .band{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .aide-row{
       display:grid;
       grid-template-columns:repeat(4,1fr);
-      gap:12px;
-      margin-top:18px;
+      gap:16px;
+      margin-top:24px;
     }
 
-    .result-card{
+    .aide-card{
       background:rgba(255,255,255,0.03);
       border:1px solid rgba(255,255,255,0.06);
-      border-radius:14px;
-      padding:14px;
+      border-radius:16px;
+      padding:18px;
     }
 
-    .result-card strong{
-      display:block;
-      margin-bottom:6px;
-      color:var(--text);
-      font-size:16px;
-    }
+    .aide-card strong{display:block;margin-bottom:8px;color:var(--cyan);font-size:16px;}
+    .aide-card span{color:var(--muted);font-size:14px;line-height:1.65;}
 
-    .result-card span{
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.6;
-    }
+    .closing{text-align:center;}
+    .closing p{max-width:760px;margin:0 auto;color:var(--muted);line-height:1.75;font-size:17px;}
 
     .footer{
       background:var(--frame);
       padding:56px 0 28px;
       border-top:1px solid var(--line);
-      margin-top:50px;
     }
 
     .footer-grid{
@@ -467,12 +242,7 @@
     }
 
     .footer h4{margin:0 0 12px;}
-    .footer p,.footer a{
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.7;
-    }
-
+    .footer p,.footer a{color:var(--muted);font-size:14px;line-height:1.7;}
     .footer a:hover{color:var(--cyan);}
     .footer-bottom{
       text-align:center;
@@ -484,16 +254,8 @@
     }
 
     @media (max-width:980px){
-      h1{font-size:38px;}
-      .intro-grid,
-      .contact-capture,
-      .result-grid,
-      .dynamic-feedback,
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
-      .options{grid-template-columns:1fr;}
-      .full-width{grid-column:auto;}
+      h1{font-size:40px;}
+      .trust-strip,.engine-grid,.aide-row,.split,.footer-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -503,7 +265,7 @@
     <div class="container nav">
       <img src="logo.png" alt="SaleSycle Logo" style="height:120px;" />
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" style="color:var(--cyan);">Home</a>
         <a href="how-we-work.html">How We Work</a>
         <a href="programmes.html">Programmes</a>
         <a href="case-studies.html">Case Studies</a>
@@ -515,259 +277,127 @@
 
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">Interactive lead diagnostic</span>
-      <h1>Sales Engine Diagnostic</h1>
+      <span class="eyebrow">SaleSycle turns sales teams into real growth engines</span>
+      <h1>Break the broken sales cycle</h1>
       <p>
-        Most sales teams are working hard, but not all are operating within a structured system that allows them to consistently perform. This short diagnostic helps you assess the strength of your sales engine across sales process, sales team behaviour, sales management rhythm, and leadership visibility.
+        SaleSycle helps established B2B organisations with stagnant or inconsistent growth reset their commercial rhythm.
+        We align leadership, strengthen sales management discipline, and elevate frontline accountability so better sales team performance leads to better revenue performance.
       </p>
-      <div class="hero-meta">Complete the diagnostic and enter your details to unlock your Sales Engine Score</div>
 
-      <div class="intro-grid">
-        <div class="panel" style="text-align:left;">
-          <h2>What this helps reveal</h2>
-          <p>
-            Inconsistent revenue performance is rarely caused by a lack of effort. More often it comes from weak process, uneven management rhythm, inconsistent sales behaviour, and limited leadership visibility.
-          </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="contact.html">Start the conversation</a>
+        <a class="btn-secondary" href="how-we-work.html">Explore AIDE</a>
+        <a class="btn-tertiary" href="diagnostic.html">Test your Sales Engine</a>
+      </div>
+
+      <div class="trust-strip">
+        <div class="trust-item">
+          <strong>Built for established B2B teams</strong>
+          <span>Ideal for organisations with 5 to 20 salespeople who know there is more value in the team than current results show.</span>
         </div>
-
-        <div class="panel" style="text-align:left;">
-          <h2>What happens next</h2>
-          <div class="mini-points">
-            <div>You complete the 12 questions</div>
-            <div>You enter your details</div>
-            <div>Your result is saved as a lead enquiry</div>
-            <div>You unlock your score and summary instantly</div>
-          </div>
+        <div class="trust-item">
+          <strong>More than training</strong>
+          <span>We do not deliver a workshop and disappear. We embed, guide, coach, and help leaders hold the new standard.</span>
+        </div>
+        <div class="trust-item">
+          <strong>Commercially measurable</strong>
+          <span>Forecasting, conversion, accountability, management rhythm, and revenue consistency all move together.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0;">
+  <section>
+    <div class="container split">
+      <div>
+        <h2 class="section-title">Why most sales improvements stall</h2>
+        <p class="section-copy">
+          Leadership messaging drifts, managers coach inconsistently, and sales teams fall back into old habits. SaleSycle rebuilds performance by aligning the top, equipping the middle, and elevating the front line with measurable standards.
+        </p>
+      </div>
+
+      <div class="panel">
+        <span class="mini-tag">What changes</span>
+        <h3>From effort to engine</h3>
+        <p>
+          We help organisations move from inconsistent effort and heroic selling into a repeatable commercial system that is visible, coached, measured, and sustainable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="engine-section">
     <div class="container">
-      <form id="diagnosticForm" class="diagnostic-form">
+      <h2 class="section-title" style="text-align:center;">The SaleSycle Growth Engine</h2>
+      <p class="section-copy" style="margin:0 auto; text-align:center;">
+        This is the operating system behind SaleSycle. When the core components of the commercial environment work together, the sales team can perform more consistently and revenue becomes more predictable.
+      </p>
 
-        <div class="section-block">
+      <div class="engine-image-wrap">
+        <img src="salesycle-growth-engine.png" alt="The SaleSycle Growth Engine diagram" class="engine-image" />
+        <p class="engine-caption">
+          The Growth Engine connects sales process, sales team behaviour, sales management, and leadership visibility around a stronger customer conversation rhythm.
+        </p>
+      </div>
+
+      <div class="engine-grid">
+        <div class="panel">
           <h3>Sales Process</h3>
-          <p>Assess how clearly opportunities move and how reliably the commercial process is being followed.</p>
-          <div class="question">
-            <div class="question-title">1. Do your salespeople follow a clearly defined and consistent sales process when progressing opportunities?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q1" value="4" id="q1a"><label for="q1a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q1" value="3" id="q1b"><label for="q1b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q1" value="2" id="q1c"><label for="q1c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q1" value="1" id="q1d"><label for="q1d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q1" value="0" id="q1e"><label for="q1e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">2. Is discovery with customers structured and designed to uncover commercial impact rather than just product needs?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q2" value="4" id="q2a"><label for="q2a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q2" value="3" id="q2b"><label for="q2b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q2" value="2" id="q2c"><label for="q2c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q2" value="1" id="q2d"><label for="q2d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q2" value="0" id="q2e"><label for="q2e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">3. Do opportunities progress through your pipeline based on agreed commercial commitments rather than optimistic forecasting?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q3" value="4" id="q3a"><label for="q3a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q3" value="3" id="q3b"><label for="q3b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q3" value="2" id="q3c"><label for="q3c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q3" value="1" id="q3d"><label for="q3d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q3" value="0" id="q3e"><label for="q3e">Not sure</label></div>
-            </div>
-          </div>
+          <p>Clear stages, stronger discovery, better business cases, and consistent progress through the deal cycle.</p>
         </div>
-
-        <div class="section-block">
+        <div class="panel">
           <h3>Sales Team Behaviour</h3>
-          <p>Assess whether the sales team is working with consistency, preparation, and stronger commercial conversations.</p>
-          <div class="question">
-            <div class="question-title">4. Do salespeople consistently prepare for customer meetings with a clear objective and structured questioning approach?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q4" value="4" id="q4a"><label for="q4a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q4" value="3" id="q4b"><label for="q4b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q4" value="2" id="q4c"><label for="q4c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q4" value="1" id="q4d"><label for="q4d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q4" value="0" id="q4e"><label for="q4e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">5. Are sales conversations focused on understanding the customer’s business challenges rather than presenting product features?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q5" value="4" id="q5a"><label for="q5a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q5" value="3" id="q5b"><label for="q5b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q5" value="2" id="q5c"><label for="q5c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q5" value="1" id="q5d"><label for="q5d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q5" value="0" id="q5e"><label for="q5e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">6. Does your team confidently build and present business cases that justify investment from the customer perspective?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q6" value="4" id="q6a"><label for="q6a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q6" value="3" id="q6b"><label for="q6b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q6" value="2" id="q6c"><label for="q6c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q6" value="1" id="q6d"><label for="q6d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q6" value="0" id="q6e"><label for="q6e">Not sure</label></div>
-            </div>
-          </div>
+          <p>Frontline accountability, practical selling habits, and more confidence in live customer conversations.</p>
         </div>
-
-        <div class="section-block">
+        <div class="panel">
           <h3>Sales Management Rhythm</h3>
-          <p>Assess whether managers are reinforcing the system in a visible, practical, and commercially useful way.</p>
-          <div class="question">
-            <div class="question-title">7. Do sales managers run structured pipeline reviews that focus on deal quality rather than just deal size?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q7" value="4" id="q7a"><label for="q7a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q7" value="3" id="q7b"><label for="q7b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q7" value="2" id="q7c"><label for="q7c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q7" value="1" id="q7d"><label for="q7d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q7" value="0" id="q7e"><label for="q7e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">8. Are sales managers actively coaching salespeople on live opportunities rather than primarily reviewing activity numbers?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q8" value="4" id="q8a"><label for="q8a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q8" value="3" id="q8b"><label for="q8b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q8" value="2" id="q8c"><label for="q8c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q8" value="1" id="q8d"><label for="q8d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q8" value="0" id="q8e"><label for="q8e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">9. Is there a consistent rhythm of performance conversations between managers and the sales team?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q9" value="4" id="q9a"><label for="q9a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q9" value="3" id="q9b"><label for="q9b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q9" value="2" id="q9c"><label for="q9c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q9" value="1" id="q9d"><label for="q9d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q9" value="0" id="q9e"><label for="q9e">Not sure</label></div>
-            </div>
-          </div>
+          <p>Coaching cadence, deal quality review, pipeline discipline, and measurable reinforcement from managers.</p>
         </div>
-
-        <div class="section-block">
+        <div class="panel">
           <h3>Leadership Visibility</h3>
-          <p>Assess whether senior leadership is clearly backing the commercial system and reinforcing standards.</p>
-          <div class="question">
-            <div class="question-title">10. Does senior leadership clearly communicate what good sales performance looks like within the organisation?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q10" value="4" id="q10a"><label for="q10a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q10" value="3" id="q10b"><label for="q10b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q10" value="2" id="q10c"><label for="q10c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q10" value="1" id="q10d"><label for="q10d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q10" value="0" id="q10e"><label for="q10e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">11. Are commercial expectations and performance standards visible across the sales organisation?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q11" value="4" id="q11a"><label for="q11a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q11" value="3" id="q11b"><label for="q11b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q11" value="2" id="q11c"><label for="q11c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q11" value="1" id="q11d"><label for="q11d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q11" value="0" id="q11e"><label for="q11e">Not sure</label></div>
-            </div>
-          </div>
-          <div class="question">
-            <div class="question-title">12. Do leaders actively reinforce the behaviours and disciplines that drive long term revenue performance?</div>
-            <div class="options">
-              <div class="option-card"><input type="radio" name="q12" value="4" id="q12a"><label for="q12a">Always</label></div>
-              <div class="option-card"><input type="radio" name="q12" value="3" id="q12b"><label for="q12b">Often</label></div>
-              <div class="option-card"><input type="radio" name="q12" value="2" id="q12c"><label for="q12c">Sometimes</label></div>
-              <div class="option-card"><input type="radio" name="q12" value="1" id="q12d"><label for="q12d">Rarely</label></div>
-              <div class="option-card"><input type="radio" name="q12" value="0" id="q12e"><label for="q12e">Not sure</label></div>
-            </div>
-          </div>
+          <p>Senior leaders setting the tone, backing the standards, and removing ambiguity around what good looks like.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="capture-box">
-          <h3>Unlock your result</h3>
-          <p>
-            Enter your details to view your Sales Engine Score, see which areas are strongest, and understand where performance may be leaking.
-          </p>
+  <section class="band">
+    <div class="container">
+      <h2 class="section-title">How change is deployed</h2>
+      <p class="section-copy">
+        Our AIDE methodology gives structure to the transformation journey and keeps the work practical, visible, and commercially grounded.
+      </p>
 
-          <div class="contact-capture">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" required />
-            </div>
-            <div class="field">
-              <label for="company">Company</label>
-              <input id="company" type="text" placeholder="Company name" required />
-            </div>
-            <div class="field full-width">
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="Your email address" required />
-            </div>
-          </div>
-
-          <div class="data-note">
-            We use your details to save your diagnostic result and, if appropriate, contact you about that result.
-          </div>
-
-          <div class="consent-box">
-            <div class="checkbox-row">
-              <input type="checkbox" id="marketingConsent" />
-              <label for="marketingConsent">I am happy for SaleSycle to contact me by email to discuss my diagnostic result and relevant services.</label>
-            </div>
-          </div>
-
-          <div class="button-row">
-            <button type="button" class="btn-primary" onclick="submitDiagnostic()">Unlock my result</button>
-          </div>
-
-          <div id="statusMessage" class="status-message"></div>
+      <div class="aide-row">
+        <div class="aide-card">
+          <strong>Access</strong>
+          <span>Get close to the business, the team, the pressure points, and the commercial reality.</span>
         </div>
-
-        <div id="resultsBox" class="results">
-          <div id="scoreNumber" class="score">0%</div>
-          <h2 id="scoreTitle">Your result</h2>
-          <p id="scoreSummary"></p>
-
-          <div class="dynamic-feedback">
-            <div class="feedback-card">
-              <strong>What this usually means</strong>
-              <span id="dynamicMeaning">Your result will unlock tailored feedback here.</span>
-            </div>
-            <div class="feedback-card">
-              <strong>Most useful next step</strong>
-              <span id="dynamicNextStep">Complete the diagnostic to see the most sensible next move.</span>
-            </div>
-          </div>
-
-          <div class="result-grid">
-            <div class="result-card">
-              <strong>Sales Process</strong>
-              <span id="processScore">0%</span>
-            </div>
-            <div class="result-card">
-              <strong>Sales Team Behaviour</strong>
-              <span id="behaviourScore">0%</span>
-            </div>
-            <div class="result-card">
-              <strong>Sales Management</strong>
-              <span id="managementScore">0%</span>
-            </div>
-            <div class="result-card">
-              <strong>Leadership Visibility</strong>
-              <span id="leadershipScore">0%</span>
-            </div>
-          </div>
-
-          <div class="button-row">
-            <a href="contact.html" class="btn-primary">Discuss my result</a>
-            <button type="button" class="btn-secondary" onclick="emailMyResults()">Email my result to myself</button>
-          </div>
+        <div class="aide-card">
+          <strong>Integrate</strong>
+          <span>Align leaders and managers, then cascade expectations and support into the sales team.</span>
         </div>
+        <div class="aide-card">
+          <strong>Deploy</strong>
+          <span>Coach in real environments, reinforce new habits, and make better performance visible.</span>
+        </div>
+        <div class="aide-card">
+          <strong>Elevate</strong>
+          <span>Build confidence, tighten discipline, and turn early gains into sustained growth.</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      </form>
+  <section class="band closing">
+    <div class="container">
+      <h2 class="section-title">Ready to rebuild performance</h2>
+      <p>
+        If your team has capability but results still feel inconsistent, SaleSycle helps you turn commercial effort into a structured growth engine.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="contact.html">Talk to SaleSycle</a>
+      </div>
     </div>
   </section>
 
@@ -793,175 +423,5 @@
     </div>
     <div class="footer-bottom">© 2026 SaleSycle. All rights reserved.</div>
   </div>
-
-  <script>
-    function getAnswerValue(name){
-      const selected = document.querySelector('input[name="' + name + '"]:checked');
-      return selected ? parseInt(selected.value, 10) : null;
-    }
-
-    function calculateSection(questions){
-      let total = 0;
-      let answered = 0;
-      questions.forEach(q => {
-        const value = getAnswerValue(q);
-        if(value !== null){
-          total += value;
-          answered += 1;
-        }
-      });
-      if(answered === 0) return null;
-      return Math.round((total / (answered * 4)) * 100);
-    }
-
-    function buildScores(){
-      const process = calculateSection(["q1","q2","q3"]);
-      const behaviour = calculateSection(["q4","q5","q6"]);
-      const management = calculateSection(["q7","q8","q9"]);
-      const leadership = calculateSection(["q10","q11","q12"]);
-      const scores = [process, behaviour, management, leadership];
-      if(scores.includes(null)) return null;
-
-      const overall = Math.round((process + behaviour + management + leadership) / 4);
-
-      let title = "";
-      let summary = "";
-      let meaning = "";
-      let nextStep = "";
-
-      if(overall <= 40){
-        title = "Sales Effort Stage";
-        summary = "Your result suggests the team may be relying heavily on individual effort rather than a consistent commercial system.";
-        meaning = "Performance is likely being distorted by uneven habits, unclear management rhythm, and limited process consistency.";
-        nextStep = "Clarify the current reality, identify where the cycle breaks down, and create stronger leadership and management alignment first.";
-      } else if(overall <= 70){
-        title = "Developing Sales Engine";
-        summary = "Your organisation likely has strong foundations, but key parts of the system are not yet consistent enough to produce predictable performance.";
-        meaning = "The team probably has capability, but execution is being weakened by inconsistency between leadership intent, manager reinforcement, and frontline behaviour.";
-        nextStep = "Tighten management rhythm, sharpen behavioural standards, and make the strongest parts of the process more visible across the team.";
-      } else {
-        title = "High Performance Engine";
-        summary = "Your result suggests a strong commercial foundation with visible discipline across leadership, management, and the sales team.";
-        meaning = "You appear to have a credible system in place. The biggest opportunity is likely refinement, consistency, and compounding gains rather than wholesale redesign.";
-        nextStep = "Focus on elevating what already works, removing remaining friction points, and building more predictable revenue from a stronger engine.";
-      }
-
-      return { process, behaviour, management, leadership, overall, title, summary, meaning, nextStep };
-    }
-
-    function showStatus(message, type){
-      const box = document.getElementById("statusMessage");
-      box.className = "status-message show " + (type === "error" ? "status-error" : "status-success");
-      box.textContent = message;
-    }
-
-    function clearStatus(){
-      const box = document.getElementById("statusMessage");
-      box.className = "status-message";
-      box.textContent = "";
-    }
-
-    function validateCapture(){
-      const name = document.getElementById("name").value.trim();
-      const company = document.getElementById("company").value.trim();
-      const email = document.getElementById("email").value.trim();
-      if(!name || !company || !email){
-        showStatus("Please enter your name, company, and email to unlock your result.", "error");
-        return false;
-      }
-      return { name, company, email };
-    }
-
-    async function submitDiagnostic(){
-      clearStatus();
-      const scores = buildScores();
-      if(!scores){
-        showStatus("Please answer all 12 questions before unlocking your result.", "error");
-        return;
-      }
-
-      const capture = validateCapture();
-      if(!capture) return;
-
-      const consent = document.getElementById("marketingConsent").checked ? "Yes" : "No";
-
-      const payload = {
-        name: capture.name,
-        company: capture.company,
-        email: capture.email,
-        marketing_consent: consent,
-        overall_score: scores.overall + "%",
-        result_category: scores.title,
-        sales_process: scores.process + "%",
-        sales_team_behaviour: scores.behaviour + "%",
-        sales_management: scores.management + "%",
-        leadership_visibility: scores.leadership + "%"
-      };
-
-      try {
-        const response = await fetch("https://formspree.io/f/mjgavyjr", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(payload)
-        });
-
-        if(!response.ok) throw new Error("Form submission failed");
-
-        renderResults(scores);
-        showStatus("Your result has been saved. Scroll down to view your score.", "success");
-      } catch (error){
-        showStatus("Something went wrong while saving your result. Please try again.", "error");
-      }
-    }
-
-    function renderResults(scores){
-      document.getElementById("scoreNumber").textContent = scores.overall + "%";
-      document.getElementById("scoreTitle").textContent = scores.title;
-      document.getElementById("scoreSummary").textContent = scores.summary;
-      document.getElementById("dynamicMeaning").textContent = scores.meaning;
-      document.getElementById("dynamicNextStep").textContent = scores.nextStep;
-
-      document.getElementById("processScore").textContent = scores.process + "%";
-      document.getElementById("behaviourScore").textContent = scores.behaviour + "%";
-      document.getElementById("managementScore").textContent = scores.management + "%";
-      document.getElementById("leadershipScore").textContent = scores.leadership + "%";
-
-      const resultsBox = document.getElementById("resultsBox");
-      resultsBox.classList.add("show");
-      resultsBox.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    function emailMyResults(){
-      const scores = buildScores();
-      if(!scores){
-        alert("Please complete the diagnostic first.");
-        return;
-      }
-
-      const name = document.getElementById("name").value.trim();
-      const company = document.getElementById("company").value.trim();
-      const email = document.getElementById("email").value.trim();
-
-      const subject = encodeURIComponent("My SaleSycle Sales Engine Diagnostic Result");
-      const body = encodeURIComponent(
-        "Name, " + name + "\n" +
-        "Company, " + company + "\n" +
-        "Email, " + email + "\n\n" +
-        "Overall Score, " + scores.overall + "%\n" +
-        "Result Category, " + scores.title + "\n\n" +
-        "Sales Process, " + scores.process + "%\n" +
-        "Sales Team Behaviour, " + scores.behaviour + "%\n" +
-        "Sales Management, " + scores.management + "%\n" +
-        "Leadership Visibility, " + scores.leadership + "%\n\n" +
-        "Meaning,\n" + scores.meaning + "\n\n" +
-        "Suggested Next Step,\n" + scores.nextStep
-      );
-
-      window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-    }
-  </script>
 </body>
 </html>
