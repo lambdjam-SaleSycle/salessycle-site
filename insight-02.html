@@ -622,12 +622,28 @@
 
       display:flex;
       justify-content:space-between;
+      align-items:center;
 
       gap:20px;
 
       color:#667085;
 
       font-size:12px;
+    }
+
+    .footer-bottom-links{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .footer-bottom-links a{
+      color:#7D8797;
+      font-size:12px;
+    }
+
+    .footer-bottom-links a:hover{
+      color:var(--cyan);
     }
 
     /* =========================
@@ -759,7 +775,14 @@
 
       .footer-bottom{
         flex-direction:column;
-        gap:8px;
+        align-items:flex-start;
+        gap:10px;
+      }
+
+      .footer-bottom-links{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
       }
     }
   </style>
@@ -933,6 +956,7 @@
       </p>
 
       <div class="contrast">
+
         <p>
           <strong>
             “Here is where I am, here is what has changed, here is what happens
@@ -949,6 +973,7 @@
             “Let me ask enough questions to work out whether everything is under control.”
           </strong>
         </p>
+
       </div>
 
 
@@ -1319,6 +1344,10 @@
               Insights
             </a>
 
+            <a href="privacy.html">
+              Privacy
+            </a>
+
           </div>
 
         </div>
@@ -1350,9 +1379,17 @@
           © 2026 SaleSycle. All rights reserved.
         </span>
 
-        <span>
-          Predictable performance. Built sustainably.
-        </span>
+        <div class="footer-bottom-links">
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <span>
+            Predictable performance. Built sustainably.
+          </span>
+
+        </div>
 
       </div>
 
