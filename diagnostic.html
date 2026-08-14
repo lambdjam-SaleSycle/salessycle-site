@@ -318,11 +318,11 @@
 
 
     /* =========================
-       PROGRESS
+       DIAGNOSTIC AREA
     ========================== */
 
     .diagnostic-area{
-      padding:96px 0 110px;
+      padding:0 0 110px;
 
       background:var(--bg-deep);
 
@@ -330,8 +330,44 @@
       border-bottom:1px solid var(--line);
     }
 
+
+    /* =========================
+       STICKY PROGRESS
+    ========================== */
+
     .progress-wrap{
+      position:sticky;
+      top:90px;
+      z-index:900;
+
       margin-bottom:45px;
+      padding:18px 0 17px;
+
+      background:rgba(8,15,29,0.96);
+
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+
+      border-bottom:1px solid var(--line);
+    }
+
+    .progress-wrap::before{
+      content:"";
+
+      position:absolute;
+      top:0;
+      bottom:-1px;
+      left:50%;
+
+      width:100vw;
+
+      transform:translateX(-50%);
+
+      background:rgba(8,15,29,0.96);
+
+      border-bottom:1px solid var(--line);
+
+      z-index:-1;
     }
 
     .progress-top{
@@ -348,6 +384,11 @@
       color:var(--muted);
 
       font-size:13px;
+    }
+
+    #progressText{
+      color:var(--soft);
+      font-weight:600;
     }
 
     .progress-bar{
@@ -1127,6 +1168,10 @@
         padding-top:12px;
       }
 
+      .progress-wrap{
+        top:102px;
+      }
+
       .intro-grid,
       .results-header,
       .contact-grid{
@@ -1199,7 +1244,15 @@
       }
 
       .diagnostic-area{
-        padding:68px 0 78px;
+        padding:0 0 78px;
+      }
+
+      .progress-wrap{
+        top:0;
+
+        margin-bottom:34px;
+
+        padding:14px 0 13px;
       }
 
       .section-heading{
@@ -1279,23 +1332,19 @@
     <div class="container nav">
 
       <a href="index.html">
-
         <img
           src="logo.png"
           alt="SaleSycle"
           class="logo"
         />
-
       </a>
 
       <nav class="nav-links">
-
         <a href="index.html">Home</a>
         <a href="how-we-work.html">How We Work</a>
         <a href="programmes.html">Programmes</a>
         <a href="insights.html">Insights</a>
         <a href="contact.html">Contact</a>
-
       </nav>
 
     </div>
@@ -1328,11 +1377,9 @@
         </p>
 
         <div class="hero-meta">
-
           <span>16 statements</span>
           <span>Approximately 5 minutes</span>
           <span>Immediate profile</span>
-
         </div>
 
       </div>
@@ -1389,7 +1436,7 @@
 
       <form id="diagnosticForm">
 
-        <!-- PROGRESS -->
+        <!-- STICKY PROGRESS -->
         <div class="progress-wrap">
 
           <div class="progress-top">
@@ -1441,7 +1488,6 @@
           </div>
 
 
-          <!-- Q1 -->
           <div class="question">
 
             <div class="question-title">
@@ -1482,7 +1528,6 @@
           </div>
 
 
-          <!-- Q2 -->
           <div class="question">
 
             <div class="question-title">
@@ -1523,7 +1568,6 @@
           </div>
 
 
-          <!-- Q3 -->
           <div class="question">
 
             <div class="question-title">
@@ -1564,7 +1608,6 @@
           </div>
 
 
-          <!-- Q4 -->
           <div class="question">
 
             <div class="question-title">
@@ -1632,7 +1675,6 @@
           </div>
 
 
-          <!-- Q5 -->
           <div class="question">
 
             <div class="question-title">
@@ -1673,7 +1715,6 @@
           </div>
 
 
-          <!-- Q6 -->
           <div class="question">
 
             <div class="question-title">
@@ -1714,7 +1755,6 @@
           </div>
 
 
-          <!-- Q7 -->
           <div class="question">
 
             <div class="question-title">
@@ -1755,7 +1795,6 @@
           </div>
 
 
-          <!-- Q8 -->
           <div class="question">
 
             <div class="question-title">
@@ -1823,7 +1862,6 @@
           </div>
 
 
-          <!-- Q9 -->
           <div class="question">
 
             <div class="question-title">
@@ -1864,7 +1902,6 @@
           </div>
 
 
-          <!-- Q10 -->
           <div class="question">
 
             <div class="question-title">
@@ -1905,7 +1942,6 @@
           </div>
 
 
-          <!-- Q11 -->
           <div class="question">
 
             <div class="question-title">
@@ -1946,7 +1982,6 @@
           </div>
 
 
-          <!-- Q12 -->
           <div class="question">
 
             <div class="question-title">
@@ -2014,7 +2049,6 @@
           </div>
 
 
-          <!-- Q13 -->
           <div class="question">
 
             <div class="question-title">
@@ -2055,7 +2089,6 @@
           </div>
 
 
-          <!-- Q14 -->
           <div class="question">
 
             <div class="question-title">
@@ -2096,7 +2129,6 @@
           </div>
 
 
-          <!-- Q15 -->
           <div class="question">
 
             <div class="question-title">
@@ -2137,7 +2169,6 @@
           </div>
 
 
-          <!-- Q16 -->
           <div class="question">
 
             <div class="question-title">
@@ -2249,7 +2280,6 @@
       </div>
 
 
-      <!-- STRONGEST / PRIORITY -->
       <div class="profile-overview">
 
         <div class="profile-item">
@@ -2279,7 +2309,6 @@
       </div>
 
 
-      <!-- COMPONENT SCORES -->
       <div class="component-section">
 
         <h3>
@@ -2295,7 +2324,6 @@
 
         <div class="component-list">
 
-          <!-- PROCESS -->
           <div class="component">
 
             <div class="component-top">
@@ -2333,7 +2361,6 @@
           </div>
 
 
-          <!-- BEHAVIOUR -->
           <div class="component">
 
             <div class="component-top">
@@ -2371,7 +2398,6 @@
           </div>
 
 
-          <!-- MANAGEMENT -->
           <div class="component">
 
             <div class="component-top">
@@ -2409,7 +2435,6 @@
           </div>
 
 
-          <!-- LEADERSHIP -->
           <div class="component">
 
             <div class="component-top">
@@ -2451,7 +2476,6 @@
       </div>
 
 
-      <!-- INTERPRETATION -->
       <div class="interpretation">
 
         <div class="interpretation-block">
@@ -2486,7 +2510,6 @@
       </div>
 
 
-      <!-- ACTIONS -->
       <div class="result-actions">
 
         <button
@@ -2734,10 +2757,6 @@
     let latestProfile = null;
 
 
-    /* =========================
-       ANSWERS / PROGRESS
-    ========================== */
-
     function getAnswerValue(name){
 
       const selected =
@@ -2787,10 +2806,6 @@
 
       });
 
-
-    /* =========================
-       SCORING
-    ========================== */
 
     function calculateSection(questionNames){
 
@@ -2896,10 +2911,6 @@
     }
 
 
-    /* =========================
-       PROFILE LANGUAGE
-    ========================== */
-
     function buildOverallObservation(score){
 
       if(score >= 80){
@@ -2987,10 +2998,6 @@
       return feedback[area];
     }
 
-
-    /* =========================
-       SHOW RESULTS
-    ========================== */
 
     function showDiagnosticStatus(message,type){
 
@@ -3168,10 +3175,6 @@
     }
 
 
-    /* =========================
-       COPY PROFILE
-    ========================== */
-
     async function copyProfile(){
 
       if(!latestProfile){
@@ -3241,10 +3244,6 @@ Leadership Visibility: ${latestProfile.leadership}%`;
         "status show " + type;
     }
 
-
-    /* =========================
-       OPTIONAL CONTACT
-    ========================== */
 
     function openContactSection(){
 
