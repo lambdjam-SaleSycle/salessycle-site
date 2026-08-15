@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8" />
 
+  <!-- =========================
+       PRIMARY SEO
+  ========================== -->
+
   <title>Contact SaleSycle | Start the Conversation</title>
 
   <meta
@@ -12,6 +16,196 @@
   />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.salesycle.com/contact.html"
+  />
+
+
+  <!-- =========================
+       FAVICONS / BRAND
+  ========================== -->
+
+  <link
+    rel="icon"
+    href="/favicon.ico"
+    sizes="any"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon-32x32.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon-16x16.png"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/apple-touch-icon.png"
+  />
+
+  <meta
+    name="theme-color"
+    content="#080F1D"
+  />
+
+
+  <!-- =========================
+       OPEN GRAPH
+  ========================== -->
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:locale"
+    content="en_GB"
+  />
+
+  <meta
+    property="og:site_name"
+    content="SaleSycle"
+  />
+
+  <meta
+    property="og:title"
+    content="Contact SaleSycle | Start the Conversation"
+  />
+
+  <meta
+    property="og:description"
+    content="Talk to SaleSycle about inconsistent sales performance, sales management, commercial process and creating more predictable growth."
+  />
+
+  <meta
+    property="og:url"
+    content="https://www.salesycle.com/contact.html"
+  />
+
+  <meta
+    property="og:image"
+    content="https://www.salesycle.com/salesycle-social.jpg"
+  />
+
+  <meta
+    property="og:image:secure_url"
+    content="https://www.salesycle.com/salesycle-social.jpg"
+  />
+
+  <meta
+    property="og:image:type"
+    content="image/jpeg"
+  />
+
+  <meta
+    property="og:image:width"
+    content="1200"
+  />
+
+  <meta
+    property="og:image:height"
+    content="630"
+  />
+
+  <meta
+    property="og:image:alt"
+    content="SaleSycle — Predictable performance. Built sustainably."
+  />
+
+
+  <!-- =========================
+       X / TWITTER
+  ========================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Contact SaleSycle | Start the Conversation"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Start a conversation about sales performance, sales management, process and predictable commercial growth."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://www.salesycle.com/salesycle-social.jpg"
+  />
+
+  <meta
+    name="twitter:image:alt"
+    content="SaleSycle — Predictable performance. Built sustainably."
+  />
+
+
+  <!-- =========================
+       STRUCTURED DATA
+  ========================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.salesycle.com/contact.html#webpage",
+        "url": "https://www.salesycle.com/contact.html",
+        "name": "Contact SaleSycle | Start the Conversation",
+        "description": "Talk to SaleSycle about sales performance, sales management, commercial process and creating more predictable revenue performance.",
+        "isPartOf": {
+          "@id": "https://www.salesycle.com/#website"
+        },
+        "about": {
+          "@id": "https://www.salesycle.com/#organization"
+        },
+        "breadcrumb": {
+          "@id": "https://www.salesycle.com/contact.html#breadcrumb"
+        },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.salesycle.com/contact.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.salesycle.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://www.salesycle.com/contact.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
 
   <style>
     :root{
@@ -1043,6 +1237,7 @@
               name="name"
               type="text"
               placeholder="Your name"
+              autocomplete="name"
               required
             />
 
@@ -1060,6 +1255,7 @@
               name="company"
               type="text"
               placeholder="Company name"
+              autocomplete="organization"
               required
             />
 
@@ -1077,6 +1273,7 @@
               name="email"
               type="email"
               placeholder="Your email address"
+              autocomplete="email"
               required
             />
 
@@ -1189,6 +1386,8 @@
           <div
             id="formStatus"
             class="status"
+            role="status"
+            aria-live="polite"
           ></div>
 
         </form>
@@ -1239,6 +1438,8 @@
             src="logo.png"
             alt="SaleSycle"
             class="footer-logo"
+            loading="lazy"
+            decoding="async"
           />
 
           <p>
@@ -1440,6 +1641,7 @@
 
 
           if(!response.ok){
+
             throw new Error(
               "Submission failed"
             );
