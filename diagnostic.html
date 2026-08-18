@@ -896,7 +896,9 @@
 
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
-    }    .profile-item{
+    }
+
+    .profile-item{
       padding:30px 34px;
     }
 
@@ -1297,6 +1299,16 @@
 
     .footer-bottom-links a:hover{
       color:var(--cyan);
+    }
+
+    .footer-legal{
+      margin-top:10px;
+      max-width:760px;
+
+      color:#667085;
+
+      font-size:11.5px;
+      line-height:1.65;
     }
 
     @media(max-width:1000px){
@@ -1816,7 +1828,8 @@
           </div>
 
         </div>
-                <!-- SECTION 2 -->
+
+        <!-- SECTION 2 -->
         <div class="diagnostic-section">
 
           <div class="section-heading">
@@ -2213,7 +2226,8 @@
             </div>
 
           </div>
-                    <div class="question">
+
+          <div class="question">
 
             <div class="question-title">
               <span>13</span>
@@ -2257,8 +2271,8 @@
 
             <div class="question-title">
               <span>14</span>
-              Revenue targets are translated into practical expectations around
-              opportunity creation, pipeline development and meaningful sales activity.
+              Leadership can see meaningful commercial indicators early enough
+              to intervene before problems appear in the final revenue number.
             </div>
 
             <div class="options">
@@ -2297,8 +2311,8 @@
 
             <div class="question-title">
               <span>15</span>
-              Leaders and sales managers reinforce the same commercial standards,
-              language and expectations across the team.
+              Salespeople, managers and leadership use consistent language,
+              expectations and definitions when discussing commercial performance.
             </div>
 
             <div class="options">
@@ -2337,8 +2351,8 @@
 
             <div class="question-title">
               <span>16</span>
-              Leadership has enough visibility of leading indicators, pipeline
-              quality and team behaviour to identify risk before the revenue number reveals it.
+              Leadership understands where sales performance is being constrained
+              and can distinguish process, behaviour, management and capability issues.
             </div>
 
             <div class="options">
@@ -2378,31 +2392,21 @@
         <div class="submit-area">
 
           <h2>
-            See your Sales Engine Profile.
+            Ready to see your Sales Engine profile?
           </h2>
 
           <p>
-            Your answers remain in your browser unless you later choose
-            to share your profile with SaleSycle. If you choose to share it,
-            your information will be handled in accordance with our
-            <a
-              href="privacy.html"
-              target="_blank"
-              rel="noopener"
-              class="privacy-link"
-            >
-              Privacy Policy
-            </a>.
+            Your result is calculated immediately in your browser.
+            You can then choose whether to share your details with SaleSycle.
           </p>
 
           <div class="button-row">
 
             <button
-              type="button"
+              type="submit"
               class="btn btn-primary"
-              onclick="showResults()"
             >
-              View my profile
+              View my results
             </button>
 
           </div>
@@ -2410,6 +2414,8 @@
           <div
             id="diagnosticStatus"
             class="status"
+            role="status"
+            aria-live="polite"
           ></div>
 
         </div>
@@ -2421,6 +2427,7 @@
   </section>
 
 
+  <!-- RESULTS -->
   <section
     id="resultsSection"
     class="results"
@@ -2433,17 +2440,22 @@
         <div class="results-intro">
 
           <div class="section-label">
-            Your Sales Engine Profile
+            Your Sales Engine profile
           </div>
 
-          <h2 id="profileTitle">
-            Your commercial profile
+          <h2>
+            Your commercial
+            <span class="gradient-text">
+              performance profile.
+            </span>
           </h2>
 
         </div>
 
         <div class="results-summary">
-          <p id="profileSummary"></p>
+
+          <p id="resultSummary"></p>
+
         </div>
 
       </div>
@@ -2454,10 +2466,10 @@
         <div class="profile-item">
 
           <span>
-            Strongest component
+            Overall profile
           </span>
 
-          <strong id="strongestArea">
+          <strong id="overallProfile">
             —
           </strong>
 
@@ -2466,10 +2478,10 @@
         <div class="profile-item">
 
           <span>
-            Priority component
+            Overall score
           </span>
 
-          <strong id="priorityArea">
+          <strong id="overallScore">
             —
           </strong>
 
@@ -2481,17 +2493,17 @@
       <div class="component-section">
 
         <h3>
-          Your four components
+          Your four Sales Engine components
         </h3>
 
         <p>
-          The individual scores are directional rather than external benchmarks.
-          Their value is in showing where your own Sales Engine appears strongest
-          and where consistency may be breaking down.
+          The overall score matters less than understanding where the
+          strongest and weakest parts of the commercial system appear to sit.
         </p>
 
 
         <div class="component-list">
+
 
           <div class="component">
 
@@ -2504,7 +2516,7 @@
                 </strong>
 
                 <span>
-                  Qualification, customer commitment and opportunity progression
+                  Qualification, progression and opportunity control
                 </span>
 
               </div>
@@ -2513,7 +2525,7 @@
                 id="processScore"
                 class="component-score"
               >
-                0%
+                —
               </div>
 
             </div>
@@ -2541,7 +2553,7 @@
                 </strong>
 
                 <span>
-                  Purposeful activity, customer conversations and commercial ownership
+                  Activity, customer engagement and commercial ownership
                 </span>
 
               </div>
@@ -2550,7 +2562,7 @@
                 id="behaviourScore"
                 class="component-score"
               >
-                0%
+                —
               </div>
 
             </div>
@@ -2578,7 +2590,7 @@
                 </strong>
 
                 <span>
-                  Visibility, upward accountability and behavioural coaching
+                  Visibility, coaching cadence and accountability
                 </span>
 
               </div>
@@ -2587,7 +2599,7 @@
                 id="managementScore"
                 class="component-score"
               >
-                0%
+                —
               </div>
 
             </div>
@@ -2615,7 +2627,7 @@
                 </strong>
 
                 <span>
-                  Commercial clarity, alignment and early visibility of risk
+                  Commercial clarity, alignment and early visibility
                 </span>
 
               </div>
@@ -2624,7 +2636,7 @@
                 id="leadershipScore"
                 class="component-score"
               >
-                0%
+                —
               </div>
 
             </div>
@@ -2640,6 +2652,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -2650,14 +2663,14 @@
         <div class="interpretation-block">
 
           <span>
-            Strength to protect
+            Strongest component
           </span>
 
-          <h3 id="strengthHeading">
+          <h3 id="strongestComponent">
             —
           </h3>
 
-          <p id="strengthCopy"></p>
+          <p id="strongestText"></p>
 
         </div>
 
@@ -2665,14 +2678,14 @@
         <div class="interpretation-block">
 
           <span>
-            Area to explore
+            Greatest opportunity
           </span>
 
-          <h3 id="priorityHeading">
+          <h3 id="weakestComponent">
             —
           </h3>
 
-          <p id="priorityCopy"></p>
+          <p id="weakestText"></p>
 
         </div>
 
@@ -2682,41 +2695,29 @@
       <div class="result-actions">
 
         <button
+          id="shareResultButton"
           type="button"
           class="btn btn-primary"
-          onclick="openContactSection()"
         >
-          Discuss my profile
+          Talk to SaleSycle about my result
         </button>
 
         <button
+          id="restartButton"
           type="button"
           class="btn btn-secondary"
-          onclick="copyProfile()"
         >
-          Copy my profile
+          Retake diagnostic
         </button>
 
-        <a
-          href="insights.html"
-          class="btn btn-secondary"
-        >
-          Explore Insights
-        </a>
-
       </div>
-
-
-      <div
-        id="copyStatus"
-        class="status"
-      ></div>
 
     </div>
 
   </section>
 
 
+  <!-- OPTIONAL CONTACT -->
   <section
     id="contactSection"
     class="contact-section"
@@ -2727,128 +2728,130 @@
       <div class="contact-copy">
 
         <div class="section-label">
-          Explore the result
+          Continue the conversation
         </div>
 
         <h2>
-          Want to talk through what your profile may be showing?
+          Want to explore what your result may mean?
         </h2>
 
         <p>
-          Share your details and your diagnostic profile will be sent
-          to SaleSycle with your enquiry, giving us a useful starting
-          point for the conversation.
+          Share your details and your Sales Engine profile will be included
+          with your enquiry so the conversation can start with some useful context.
         </p>
 
       </div>
 
 
-      <div>
+      <form
+        id="resultContactForm"
+        class="contact-form"
+      >
 
-        <div class="contact-form">
+        <div class="field">
 
+          <label for="resultName">
+            Name
+          </label>
 
-          <div class="field">
-
-            <label for="name">
-              Name
-            </label>
-
-            <input
-              id="name"
-              type="text"
-              placeholder="Your name"
-            />
-
-          </div>
-
-
-          <div class="field">
-
-            <label for="company">
-              Company
-            </label>
-
-            <input
-              id="company"
-              type="text"
-              placeholder="Company name"
-            />
-
-          </div>
-
-
-          <div class="field full">
-
-            <label for="email">
-              Email
-            </label>
-
-            <input
-              id="email"
-              type="email"
-              placeholder="Your email address"
-            />
-
-          </div>
-
-
-          <div class="consent">
-
-            <input
-              type="checkbox"
-              id="contactConsent"
-            />
-
-            <label for="contactConsent">
-              I would like SaleSycle to contact me about my diagnostic
-              profile and this enquiry. Please see our
-              <a
-                href="privacy.html"
-                target="_blank"
-                rel="noopener"
-              >
-                Privacy Policy
-              </a>
-              for information about how we handle your personal information.
-            </label>
-
-          </div>
-
-
-          <div class="privacy-note">
-            Sharing your profile does not automatically add you to a general marketing mailing list.
-          </div>
-
-
-          <div class="contact-buttons">
-
-            <button
-              type="button"
-              class="btn btn-primary"
-              id="sendProfileButton"
-              onclick="sendProfile()"
-            >
-              Send my profile
-            </button>
-
-          </div>
+          <input
+            id="resultName"
+            type="text"
+            autocomplete="name"
+            required
+          />
 
         </div>
 
 
+        <div class="field">
+
+          <label for="resultCompany">
+            Company
+          </label>
+
+          <input
+            id="resultCompany"
+            type="text"
+            autocomplete="organization"
+            required
+          />
+
+        </div>
+
+
+        <div class="field full">
+
+          <label for="resultEmail">
+            Email
+          </label>
+
+          <input
+            id="resultEmail"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+        </div>
+
+
+        <div class="consent">
+
+          <input
+            type="checkbox"
+            id="resultConsent"
+            required
+          />
+
+          <label for="resultConsent">
+            I am happy for SaleSycle to contact me about my diagnostic result.
+            Please see our
+            <a
+              href="privacy.html"
+              target="_blank"
+              rel="noopener"
+            >
+              Privacy Policy
+            </a>
+            for information about how we handle your personal information.
+          </label>
+
+        </div>
+
+
+        <div class="privacy-note">
+          Your diagnostic result is only shared with SaleSycle if you submit this form.
+        </div>
+
+
+        <div class="contact-buttons">
+
+          <button
+            id="resultSubmitButton"
+            type="submit"
+            class="btn btn-primary"
+          >
+            Send my result
+          </button>
+
+        </div>
+
         <div
-          id="contactStatus"
+          id="resultContactStatus"
           class="status"
+          role="status"
+          aria-live="polite"
         ></div>
 
-      </div>
+      </form>
 
     </div>
 
   </section>
 
 
+  <!-- FOOTER -->
   <footer class="footer">
 
     <div class="container">
@@ -2861,6 +2864,8 @@
             src="logo.png"
             alt="SaleSycle"
             class="footer-logo"
+            loading="lazy"
+            decoding="async"
           />
 
           <p>
@@ -2923,9 +2928,19 @@
 
       <div class="footer-bottom">
 
-        <span>
-          © 2026 SaleSycle. All rights reserved.
-        </span>
+        <div>
+
+          <span>
+            © 2026 SaleSycle. All rights reserved.
+          </span>
+
+          <div class="footer-legal">
+            SaleSycle is a trading name of JV MEDTECH CONSULTING LTD.
+            Registered in England and Wales, company number 17243361.
+            Registered office: 6 Wellspring Place, Plymouth, England, PL9 8GN.
+          </div>
+
+        </div>
 
         <div class="footer-bottom-links">
 
@@ -2944,7 +2959,9 @@
     </div>
 
   </footer>
-    <script>
+
+
+  <script>
 
     let latestProfile = null;
 
@@ -2957,698 +2974,681 @@
         );
 
       return selected
-        ? parseInt(selected.value,10)
+        ? Number(selected.value)
         : null;
     }
 
 
-    function updateProgress(){
+    function getSectionScore(start,end){
 
-      let answered = 0;
+      let total = 0;
 
-      for(let i = 1; i <= 16; i++){
+      for(
+        let i = start;
+        i <= end;
+        i++
+      ){
 
-        if(getAnswerValue("q" + i) !== null){
-          answered++;
-        }
-
+        total +=
+          getAnswerValue(
+            "q" + i
+          );
       }
 
-      const percentage =
-        Math.round((answered / 16) * 100);
-
-      document.getElementById("progressText").textContent =
-        answered + " of 16";
-
-      document.getElementById("progressFill").style.width =
-        percentage + "%";
+      return total;
     }
 
 
-    document
-      .querySelectorAll(
-        'input[type="radio"]'
-      )
-      .forEach(input => {
+    function percentage(score,max){
+
+      return Math.round(
+        (score / max) * 100
+      );
+    }
+
+
+    function getProfileLabel(percent){
+
+      if(percent >= 85){
+        return "Strong and well aligned";
+      }
+
+      if(percent >= 70){
+        return "Good foundations with some friction";
+      }
+
+      if(percent >= 55){
+        return "Inconsistent commercial system";
+      }
+
+      if(percent >= 40){
+        return "Significant performance friction";
+      }
+
+      return "Commercial system needs attention";
+    }
+
+
+    function getSummaryText(percent){
+
+      if(percent >= 85){
+
+        return "Your responses suggest a strong and relatively well aligned commercial system. The opportunity is likely to be less about wholesale change and more about protecting consistency, refining weak spots and maintaining management discipline.";
+      }
+
+      if(percent >= 70){
+
+        return "Your responses suggest good commercial foundations, but some parts of the Sales Engine may not be operating with the same consistency. The biggest opportunity is likely to come from identifying where process, management or behaviour is beginning to create friction.";
+      }
+
+      if(percent >= 55){
+
+        return "Your responses suggest that capable people may be working inside a commercial system that is not always reinforcing consistent performance. There are likely to be meaningful opportunities to improve visibility, management rhythm and repeatability.";
+      }
+
+      if(percent >= 40){
+
+        return "Your responses suggest significant friction across the commercial system. Performance may currently depend too heavily on individual effort, experience or intervention rather than a consistent operating rhythm.";
+      }
+
+      return "Your responses suggest that the commercial system may currently lack enough structure, visibility and reinforcement to support predictable performance. Building stronger fundamentals could create significant improvement.";
+    }
+
+
+    const componentDescriptions = {
+
+      "Sales Process":
+        "This suggests your opportunity management, qualification and customer progression disciplines are comparatively strong.",
+
+      "Sales Team Behaviour":
+        "This suggests your frontline team is comparatively strong in purposeful activity, customer engagement and ownership.",
+
+      "Sales Management Rhythm":
+        "This suggests your management cadence, coaching and performance visibility are comparatively strong.",
+
+      "Leadership Visibility":
+        "This suggests leadership clarity, commercial alignment and visibility are comparatively strong."
+    };
+
+
+    const opportunityDescriptions = {
+
+      "Sales Process":
+        "Improving qualification, customer evidence, stakeholder visibility and opportunity progression may create the greatest immediate commercial impact.",
+
+      "Sales Team Behaviour":
+        "Improving the quality, purpose and commercial ownership of frontline activity may create the greatest immediate commercial impact.",
+
+      "Sales Management Rhythm":
+        "Strengthening management cadence, coaching and visibility may create the greatest immediate commercial impact.",
+
+      "Leadership Visibility":
+        "Improving commercial clarity, alignment and leadership visibility may create the greatest immediate commercial impact."
+    };
+
+
+    function updateProgress(){
+
+      let completed = 0;
+
+      for(
+        let i = 1;
+        i <= 16;
+        i++
+      ){
+
+        if(
+          getAnswerValue(
+            "q" + i
+          ) !== null
+        ){
+
+          completed++;
+        }
+      }
+
+
+      document.getElementById(
+        "progressText"
+      ).textContent =
+        completed + " of 16";
+
+
+      document.getElementById(
+        "progressFill"
+      ).style.width =
+        ((completed / 16) * 100) + "%";
+    }
+
+
+    document.querySelectorAll(
+      '#diagnosticForm input[type="radio"]'
+    ).forEach(
+      function(input){
 
         input.addEventListener(
           "change",
           updateProgress
         );
+      }
+    );
 
-      });
+
+    const diagnosticForm =
+      document.getElementById(
+        "diagnosticForm"
+      );
 
 
-    function calculateSection(questionNames){
+    const diagnosticStatus =
+      document.getElementById(
+        "diagnosticStatus"
+      );
 
-      let total = 0;
 
-      for(const question of questionNames){
+    diagnosticForm.addEventListener(
+      "submit",
+      function(event){
 
-        const value =
-          getAnswerValue(question);
+        event.preventDefault();
 
-        if(value === null){
-          return null;
+
+        for(
+          let i = 1;
+          i <= 16;
+          i++
+        ){
+
+          if(
+            getAnswerValue(
+              "q" + i
+            ) === null
+          ){
+
+            diagnosticStatus.textContent =
+              "Please answer all 16 statements before viewing your result.";
+
+            diagnosticStatus.className =
+              "status show error";
+
+            return;
+          }
         }
 
-        total += value;
-      }
 
-      return Math.round(
-        (total / (questionNames.length * 4)) * 100
-      );
-    }
-
-
-    function buildProfile(){
-
-      const process =
-        calculateSection(
-          ["q1","q2","q3","q4"]
-        );
-
-      const behaviour =
-        calculateSection(
-          ["q5","q6","q7","q8"]
-        );
-
-      const management =
-        calculateSection(
-          ["q9","q10","q11","q12"]
-        );
-
-      const leadership =
-        calculateSection(
-          ["q13","q14","q15","q16"]
-        );
-
-
-      if(
-        process === null ||
-        behaviour === null ||
-        management === null ||
-        leadership === null
-      ){
-        return null;
-      }
-
-
-      const areas = {
-
-        "Sales Process":process,
-
-        "Sales Team Behaviour":behaviour,
-
-        "Sales Management Rhythm":management,
-
-        "Leadership Visibility":leadership
-      };
-
-
-      const sorted =
-        Object.entries(areas)
-        .sort(
-          (a,b) => b[1] - a[1]
-        );
-
-
-      const strongest =
-        sorted[0][0];
-
-      const priority =
-        sorted[sorted.length - 1][0];
-
-
-      const overall =
-        Math.round(
-          (
-            process +
-            behaviour +
-            management +
-            leadership
-          ) / 4
-        );
-
-
-      return {
-        process,
-        behaviour,
-        management,
-        leadership,
-        overall,
-        strongest,
-        priority
-      };
-    }
-
-
-    function buildOverallObservation(score){
-
-      if(score >= 80){
-
-        return {
-          title:"Strong commercial foundations",
-          summary:
-            "Your responses suggest a well established Sales Engine with good alignment across the commercial environment. The opportunity is likely to be less about redesign and more about protecting consistency, removing remaining friction and continuing to raise the standard."
-        };
-
-      }
-
-
-      if(score >= 65){
-
-        return {
-          title:"Established, with some friction",
-          summary:
-            "Your organisation appears to have many of the right commercial foundations in place, but consistency may vary between different parts of the Sales Engine. The greatest gains may come from strengthening the connection between what is expected, what happens in practice and what managers are able to see."
-        };
-
-      }
-
-
-      if(score >= 45){
-
-        return {
-          title:"Building commercial consistency",
-          summary:
-            "Your responses suggest useful capability already exists, but the system around it may not yet be consistent enough to make performance predictable. This is often where individual effort is strong but process, management rhythm or visibility varies across the team."
-        };
-
-      }
-
-
-      return {
-        title:"Opportunity to strengthen the system",
-        summary:
-          "Your profile suggests the commercial environment may currently rely heavily on individual effort and experience. Creating clearer expectations, greater visibility and a more consistent operating rhythm could provide a stronger foundation for future performance."
-      };
-    }
-
-
-    function getAreaFeedback(area){
-
-      const feedback = {
-
-        "Sales Process":{
-          strength:
-            "Your responses suggest opportunities are being managed with relatively strong commercial discipline. Protect the behaviours around qualification, customer commitment and clear progression rather than allowing pipeline pressure to dilute them.",
-
-          priority:
-            "This area may be creating uncertainty later in the sales cycle. It may be worth examining how discovery, qualification, stakeholder engagement, agreed next steps and forecast dates are currently being managed."
-        },
-
-
-        "Sales Team Behaviour":{
-          strength:
-            "Your frontline team appears to demonstrate relatively strong commercial behaviours. Protect the link between purposeful activity, customer conversations and individual ownership as the business grows or changes.",
-
-          priority:
-            "The team may benefit from greater consistency around purposeful activity, meeting preparation, stakeholder management and converting customer interest into a compelling reason to act."
-        },
-
-
-        "Sales Management Rhythm":{
-          strength:
-            "Your management rhythm appears to provide relatively strong visibility and reinforcement. Protect the balance between accountability and autonomy so managers continue developing performance rather than simply monitoring it.",
-
-          priority:
-            "Management may currently be spending too much time reacting to outcomes or chasing information. A clearer rhythm of upward accountability, leading indicators and behavioural coaching could improve both visibility and autonomy."
-        },
-
-
-        "Leadership Visibility":{
-          strength:
-            "Leadership appears to be creating relatively strong commercial clarity. Protect the connection between strategic priorities, management expectations and what salespeople experience day to day.",
-
-          priority:
-            "There may be an opportunity to make commercial expectations more visible and actionable. Translating revenue targets into clearer behaviours, priorities and leading indicators can help the organisation identify risk earlier."
-        }
-
-      };
-
-      return feedback[area];
-    }
-
-
-    function showDiagnosticStatus(message,type){
-
-      const status =
-        document.getElementById(
-          "diagnosticStatus"
-        );
-
-      status.textContent = message;
-
-      status.className =
-        "status show " + type;
-    }
-
-
-    function clearDiagnosticStatus(){
-
-      const status =
-        document.getElementById(
-          "diagnosticStatus"
-        );
-
-      status.className =
-        "status";
-
-      status.textContent = "";
-    }
-
-
-    function showResults(){
-
-      clearDiagnosticStatus();
-
-      const profile =
-        buildProfile();
-
-
-      if(!profile){
-
-        showDiagnosticStatus(
-          "Please respond to all 16 statements before viewing your profile.",
-          "error"
-        );
-
-        return;
-      }
-
-
-      latestProfile = profile;
-
-
-      const observation =
-        buildOverallObservation(
-          profile.overall
-        );
-
-
-      const strongestFeedback =
-        getAreaFeedback(
-          profile.strongest
-        );
-
-
-      const priorityFeedback =
-        getAreaFeedback(
-          profile.priority
-        );
-
-
-      document.getElementById(
-        "profileTitle"
-      ).textContent =
-        observation.title;
-
-
-      document.getElementById(
-        "profileSummary"
-      ).textContent =
-        observation.summary;
-
-
-      document.getElementById(
-        "strongestArea"
-      ).textContent =
-        profile.strongest;
-
-
-      document.getElementById(
-        "priorityArea"
-      ).textContent =
-        profile.priority;
-
-
-      setScore(
-        "process",
-        profile.process
-      );
-
-      setScore(
-        "behaviour",
-        profile.behaviour
-      );
-
-      setScore(
-        "management",
-        profile.management
-      );
-
-      setScore(
-        "leadership",
-        profile.leadership
-      );
-
-
-      document.getElementById(
-        "strengthHeading"
-      ).textContent =
-        profile.strongest;
-
-
-      document.getElementById(
-        "strengthCopy"
-      ).textContent =
-        strongestFeedback.strength;
-
-
-      document.getElementById(
-        "priorityHeading"
-      ).textContent =
-        profile.priority;
-
-
-      document.getElementById(
-        "priorityCopy"
-      ).textContent =
-        priorityFeedback.priority;
-
-
-      const results =
-        document.getElementById(
-          "resultsSection"
-        );
-
-
-      results.classList.add("show");
-
-
-      setTimeout(() => {
-
-        results.scrollIntoView({
-          behavior:"smooth",
-          block:"start"
-        });
-
-      },100);
-    }
-
-
-    function setScore(id,score){
-
-      document.getElementById(
-        id + "Score"
-      ).textContent =
-        score + "%";
-
-
-      setTimeout(() => {
-
-        document.getElementById(
-          id + "Bar"
-        ).style.width =
-          score + "%";
-
-      },250);
-    }
-
-
-    async function copyProfile(){
-
-      if(!latestProfile){
-        return;
-      }
-
-
-      const observation =
-        buildOverallObservation(
-          latestProfile.overall
-        );
-
-
-      const text =
-`My SaleSycle Sales Engine Profile
-
-Overall observation:
-${observation.title}
-
-${observation.summary}
-
-Strongest component:
-${latestProfile.strongest}
-
-Priority component:
-${latestProfile.priority}
-
-Sales Process: ${latestProfile.process}%
-Sales Team Behaviour: ${latestProfile.behaviour}%
-Sales Management Rhythm: ${latestProfile.management}%
-Leadership Visibility: ${latestProfile.leadership}%`;
-
-
-      try{
-
-        await navigator.clipboard.writeText(
-          text
-        );
-
-
-        showCopyStatus(
-          "Your profile has been copied.",
-          "success"
-        );
-
-      }catch(error){
-
-        showCopyStatus(
-          "We couldn't copy the profile automatically. Please try again.",
-          "error"
-        );
-
-      }
-    }
-
-
-    function showCopyStatus(message,type){
-
-      const box =
-        document.getElementById(
-          "copyStatus"
-        );
-
-      box.textContent = message;
-
-      box.className =
-        "status show " + type;
-    }
-
-
-    function openContactSection(){
-
-      const contact =
-        document.getElementById(
-          "contactSection"
-        );
-
-      contact.classList.add("show");
-
-
-      setTimeout(() => {
-
-        contact.scrollIntoView({
-          behavior:"smooth",
-          block:"start"
-        });
-
-      },100);
-    }
-
-
-    function showContactStatus(message,type){
-
-      const box =
-        document.getElementById(
-          "contactStatus"
-        );
-
-      box.textContent = message;
-
-      box.className =
-        "status show " + type;
-    }
-
-
-    async function sendProfile(){
-
-      if(!latestProfile){
-
-        showContactStatus(
-          "Please complete the diagnostic first.",
-          "error"
-        );
-
-        return;
-      }
-
-
-      const name =
-        document.getElementById(
-          "name"
-        ).value.trim();
-
-
-      const company =
-        document.getElementById(
-          "company"
-        ).value.trim();
-
-
-      const email =
-        document.getElementById(
-          "email"
-        ).value.trim();
-
-
-      const consent =
-        document.getElementById(
-          "contactConsent"
-        ).checked;
-
-
-      if(
-        !name ||
-        !company ||
-        !email
-      ){
-
-        showContactStatus(
-          "Please enter your name, company and email.",
-          "error"
-        );
-
-        return;
-      }
-
-
-      if(!consent){
-
-        showContactStatus(
-          "Please confirm that you would like SaleSycle to contact you about this enquiry.",
-          "error"
-        );
-
-        return;
-      }
-
-
-      const observation =
-        buildOverallObservation(
-          latestProfile.overall
-        );
-
-
-      const payload = {
-
-        name:name,
-
-        company:company,
-
-        email:email,
-
-        enquiry_type:
-          "Sales Engine Diagnostic",
-
-        profile_observation:
-          observation.title,
-
-        strongest_component:
-          latestProfile.strongest,
-
-        priority_component:
-          latestProfile.priority,
-
-        sales_process:
-          latestProfile.process + "%",
-
-        sales_team_behaviour:
-          latestProfile.behaviour + "%",
-
-        sales_management_rhythm:
-          latestProfile.management + "%",
-
-        leadership_visibility:
-          latestProfile.leadership + "%",
-
-        contact_consent:
-          "Yes",
-
-        privacy_notice:
-          "Privacy Policy presented at point of submission"
-      };
-
-
-      const button =
-        document.getElementById(
-          "sendProfileButton"
-        );
-
-
-      const originalText =
-        button.textContent;
-
-
-      button.disabled = true;
-
-      button.textContent =
-        "Sending profile...";
-
-
-      try{
-
-        const response =
-          await fetch(
-            "https://formspree.io/f/mjgavyjr",
-            {
-              method:"POST",
-
-              headers:{
-                "Content-Type":"application/json",
-                "Accept":"application/json"
-              },
-
-              body:JSON.stringify(
-                payload
-              )
+        diagnosticStatus.className =
+          "status";
+
+
+        const process =
+          getSectionScore(
+            1,
+            4
+          );
+
+        const behaviour =
+          getSectionScore(
+            5,
+            8
+          );
+
+        const management =
+          getSectionScore(
+            9,
+            12
+          );
+
+        const leadership =
+          getSectionScore(
+            13,
+            16
+          );
+
+
+        const total =
+          process +
+          behaviour +
+          management +
+          leadership;
+
+
+        const overallPercent =
+          percentage(
+            total,
+            64
+          );
+
+
+        const components = [
+          {
+            name:"Sales Process",
+            score:process,
+            percent:percentage(
+              process,
+              16
+            )
+          },
+          {
+            name:"Sales Team Behaviour",
+            score:behaviour,
+            percent:percentage(
+              behaviour,
+              16
+            )
+          },
+          {
+            name:"Sales Management Rhythm",
+            score:management,
+            percent:percentage(
+              management,
+              16
+            )
+          },
+          {
+            name:"Leadership Visibility",
+            score:leadership,
+            percent:percentage(
+              leadership,
+              16
+            )
+          }
+        ];
+
+
+        const sorted =
+          [...components].sort(
+            function(a,b){
+              return b.percent - a.percent;
             }
           );
 
 
-        if(!response.ok){
-          throw new Error(
-            "Submission failed"
+        const strongest =
+          sorted[0];
+
+        const weakest =
+          sorted[
+            sorted.length - 1
+          ];
+
+
+        latestProfile = {
+          overallPercent,
+          label:
+            getProfileLabel(
+              overallPercent
+            ),
+          process:
+            components[0].percent,
+          behaviour:
+            components[1].percent,
+          management:
+            components[2].percent,
+          leadership:
+            components[3].percent,
+          strongest:
+            strongest.name,
+          weakest:
+            weakest.name
+        };
+
+
+        document.getElementById(
+          "overallProfile"
+        ).textContent =
+          latestProfile.label;
+
+
+        document.getElementById(
+          "overallScore"
+        ).textContent =
+          overallPercent + "%";
+
+
+        document.getElementById(
+          "resultSummary"
+        ).textContent =
+          getSummaryText(
+            overallPercent
           );
+
+
+        document.getElementById(
+          "processScore"
+        ).textContent =
+          latestProfile.process + "%";
+
+        document.getElementById(
+          "behaviourScore"
+        ).textContent =
+          latestProfile.behaviour + "%";
+
+        document.getElementById(
+          "managementScore"
+        ).textContent =
+          latestProfile.management + "%";
+
+        document.getElementById(
+          "leadershipScore"
+        ).textContent =
+          latestProfile.leadership + "%";
+
+
+        document.getElementById(
+          "processBar"
+        ).style.width =
+          latestProfile.process + "%";
+
+        document.getElementById(
+          "behaviourBar"
+        ).style.width =
+          latestProfile.behaviour + "%";
+
+        document.getElementById(
+          "managementBar"
+        ).style.width =
+          latestProfile.management + "%";
+
+        document.getElementById(
+          "leadershipBar"
+        ).style.width =
+          latestProfile.leadership + "%";
+
+
+        document.getElementById(
+          "strongestComponent"
+        ).textContent =
+          strongest.name;
+
+
+        document.getElementById(
+          "strongestText"
+        ).textContent =
+          componentDescriptions[
+            strongest.name
+          ];
+
+
+        document.getElementById(
+          "weakestComponent"
+        ).textContent =
+          weakest.name;
+
+
+        document.getElementById(
+          "weakestText"
+        ).textContent =
+          opportunityDescriptions[
+            weakest.name
+          ];
+
+
+        const resultsSection =
+          document.getElementById(
+            "resultsSection"
+          );
+
+
+        resultsSection.classList.add(
+          "show"
+        );
+
+
+        resultsSection.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+
+      }
+    );
+
+
+    document.getElementById(
+      "restartButton"
+    ).addEventListener(
+      "click",
+      function(){
+
+        diagnosticForm.reset();
+
+        latestProfile = null;
+
+        updateProgress();
+
+
+        document.getElementById(
+          "resultsSection"
+        ).classList.remove(
+          "show"
+        );
+
+
+        document.getElementById(
+          "contactSection"
+        ).classList.remove(
+          "show"
+        );
+
+
+        diagnosticForm.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+
+      }
+    );
+
+
+    document.getElementById(
+      "shareResultButton"
+    ).addEventListener(
+      "click",
+      function(){
+
+        const contactSection =
+          document.getElementById(
+            "contactSection"
+          );
+
+
+        contactSection.classList.add(
+          "show"
+        );
+
+
+        contactSection.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+
+      }
+    );
+
+
+    const resultContactForm =
+      document.getElementById(
+        "resultContactForm"
+      );
+
+
+    const resultSubmitButton =
+      document.getElementById(
+        "resultSubmitButton"
+      );
+
+
+    const resultContactStatus =
+      document.getElementById(
+        "resultContactStatus"
+      );
+
+
+    resultContactForm.addEventListener(
+      "submit",
+      async function(event){
+
+        event.preventDefault();
+
+
+        if(!latestProfile){
+
+          resultContactStatus.textContent =
+            "Please complete the diagnostic first.";
+
+          resultContactStatus.className =
+            "status show error";
+
+          return;
         }
 
 
-        showContactStatus(
-          "Thank you. Your profile has been sent to SaleSycle and we'll be in touch.",
-          "success"
-        );
+        const consent =
+          document.getElementById(
+            "resultConsent"
+          ).checked;
 
 
-        button.textContent =
-          "Profile sent";
+        if(!consent){
+
+          resultContactStatus.textContent =
+            "Please confirm that you are happy for SaleSycle to contact you about your result.";
+
+          resultContactStatus.className =
+            "status show error";
+
+          return;
+        }
 
 
-      }catch(error){
+        const payload = {
 
-        button.disabled = false;
+          name:
+            document.getElementById(
+              "resultName"
+            ).value.trim(),
 
-        button.textContent =
-          originalText;
+          company:
+            document.getElementById(
+              "resultCompany"
+            ).value.trim(),
+
+          email:
+            document.getElementById(
+              "resultEmail"
+            ).value.trim(),
+
+          enquiry_type:
+            "Sales Engine Diagnostic",
+
+          overall_profile:
+            latestProfile.label,
+
+          overall_score:
+            latestProfile.overallPercent + "%",
+
+          sales_process:
+            latestProfile.process + "%",
+
+          sales_team_behaviour:
+            latestProfile.behaviour + "%",
+
+          sales_management_rhythm:
+            latestProfile.management + "%",
+
+          leadership_visibility:
+            latestProfile.leadership + "%",
+
+          strongest_component:
+            latestProfile.strongest,
+
+          greatest_opportunity:
+            latestProfile.weakest,
+
+          contact_consent:
+            "Yes",
+
+          privacy_notice:
+            "Privacy Policy presented at point of submission"
+
+        };
 
 
-        showContactStatus(
-          "Something went wrong while sending your profile. Please try again.",
-          "error"
-        );
+        const originalText =
+          resultSubmitButton.textContent;
+
+
+        resultSubmitButton.disabled =
+          true;
+
+
+        resultSubmitButton.textContent =
+          "Sending...";
+
+
+        try{
+
+          const response =
+            await fetch(
+              "https://formspree.io/f/mjgavyjr",
+              {
+                method:"POST",
+
+                headers:{
+                  "Content-Type":"application/json",
+                  "Accept":"application/json"
+                },
+
+                body:JSON.stringify(
+                  payload
+                )
+              }
+            );
+
+
+          if(!response.ok){
+
+            throw new Error(
+              "Submission failed"
+            );
+          }
+
+
+          resultContactStatus.textContent =
+            "Thank you. Your diagnostic result has been sent and we'll be in touch.";
+
+
+          resultContactStatus.className =
+            "status show success";
+
+
+          resultContactForm.reset();
+
+
+          resultSubmitButton.textContent =
+            "Result sent";
+
+
+        }catch(error){
+
+          resultSubmitButton.disabled =
+            false;
+
+
+          resultSubmitButton.textContent =
+            originalText;
+
+
+          resultContactStatus.textContent =
+            "Something went wrong while sending your result. Please try again or email enquiries@salesycle.com directly.";
+
+
+          resultContactStatus.className =
+            "status show error";
+
+        }
 
       }
-    }
+    );
 
   </script>
 
